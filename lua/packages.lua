@@ -39,7 +39,7 @@ packer.startup(function()
   use 'hrsh7th/cmp-nvim-lsp'
   use 'saadparwaiz1/cmp_luasnip'
   use 'windwp/nvim-autopairs'
-  -- use 'windwp/nvim-ts-autotag'
+  use 'windwp/nvim-ts-autotag'
   use 'L3MON4D3/LuaSnip'
   use 'numToStr/Comment.nvim'
 
@@ -82,7 +82,6 @@ packer.startup(function()
 
   -- non neovim plugins
   use 'maxmellon/vim-jsx-pretty'
-  use 'alvan/vim-closetag'
   use 'ryanoasis/vim-devicons'
 
   if packer_bootstrap then

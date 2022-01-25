@@ -119,6 +119,11 @@ _G.packer_plugins = {
     path = "/Users/chrisvalenzuela/.local/share/nvim/site/pack/packer/start/fd",
     url = "https://github.com/sharkdp/fd"
   },
+  ["github-nvim-theme"] = {
+    loaded = true,
+    path = "/Users/chrisvalenzuela/.local/share/nvim/site/pack/packer/start/github-nvim-theme",
+    url = "https://github.com/projekt0n/github-nvim-theme"
+  },
   ["lualine.nvim"] = {
     loaded = true,
     path = "/Users/chrisvalenzuela/.local/share/nvim/site/pack/packer/start/lualine.nvim",
@@ -179,6 +184,11 @@ _G.packer_plugins = {
     path = "/Users/chrisvalenzuela/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
   },
+  ["nvim-ts-autotag"] = {
+    loaded = true,
+    path = "/Users/chrisvalenzuela/.local/share/nvim/site/pack/packer/start/nvim-ts-autotag",
+    url = "https://github.com/windwp/nvim-ts-autotag"
+  },
   ["nvim-web-devicons"] = {
     loaded = true,
     path = "/Users/chrisvalenzuela/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
@@ -213,11 +223,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/chrisvalenzuela/.local/share/nvim/site/pack/packer/start/vim-bbye",
     url = "https://github.com/moll/vim-bbye"
-  },
-  ["vim-closetag"] = {
-    loaded = true,
-    path = "/Users/chrisvalenzuela/.local/share/nvim/site/pack/packer/start/vim-closetag",
-    url = "https://github.com/alvan/vim-closetag"
   },
   ["vim-devicons"] = {
     loaded = true,
