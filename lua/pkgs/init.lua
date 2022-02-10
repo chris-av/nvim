@@ -1,0 +1,5 @@
+require('lua/pkgs.bufferline')
+require('lua/pkgs.github-themes')
+require('lua/pkgs.lualine')
+require('lua/pkgs.material')
+require('lua/pkgs.nvim-tree')
