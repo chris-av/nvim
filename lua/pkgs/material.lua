@@ -1,8 +1,13 @@
--- print('running setup!')
+local status_ok, material = pcall(require, 'material')
+if not status_ok then
+  print('could not load material theme ... ')
+  return
+end
+
 vim.g.material_style = 'deep ocean'
 
 -- vim.cmd[[ set termguicolors ]] -- this variable must be enabled for colors to be applied properly
-require('material').setup({
+material.setup({
   custom_highlights = {
     NvimTreeFolderIcon = { fg = 'LightBlue' },
     NvimTreeGitNew = { fg = 'red' },
