@@ -25,8 +25,7 @@ keymap('n', 'fh', "<cmd>lua require('telescope.builtin').help_tags()<CR>", opts)
 
 -- bufferline
 keymap('n', '<S-l>', ':bnext<CR>', opts)
-keymap('n', '<S-h>', ':bnext<CR>', opts)
-keymap('n', '<S-h>', ':bnext<CR>', opts)
+keymap('n', '<S-h>', ':bprevious<CR>', opts)
 keymap('n', 'Q', '<cmd>Bdelete!<CR>', opts)
 
 
