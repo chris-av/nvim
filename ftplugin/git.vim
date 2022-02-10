@@ -1,1 +1,1 @@
-au FileType gitcommit ssetlocal tw=72
+au FileType gitcommit setlocal tw=72
