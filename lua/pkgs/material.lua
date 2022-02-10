@@ -1,8 +1,4 @@
-local status_ok, material = pcall(require, 'material')
-if not status_ok then
-  print('could not load material theme ... ')
-  return
-end
+local material = require('material')
 
 vim.g.material_style = 'deep ocean'
 
