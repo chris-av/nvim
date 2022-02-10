@@ -12,7 +12,6 @@ augroup END
 
 
 
-require('completions')
 require('diagnostics')
 require('packages')
 require('lsp')
