@@ -2,9 +2,6 @@
 require('configs')
 
 
--- indent on git files
-vim.cmd('au FileType gitcommit setlocal tw=72')
-
 -- use template html file
 vim.cmd([[
 augroup skeletons
@@ -15,11 +12,12 @@ augroup END
 
 
 
-require 'completions'
-require 'diagnostics'
-require 'packages'
-require 'lsp'
-require 'debuggers'
+require('completions')
+require('diagnostics')
+require('packages')
+require('lsp')
+require('debuggers')
+require('pkgs')
 
 
 
