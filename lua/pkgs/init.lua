@@ -8,4 +8,5 @@ require('pkgs.telescope')
 require('pkgs.cmp')
 require('pkgs.nvim-autopairs')
 require('pkgs.treesitter')
+require('pkgs.luasnip')
 

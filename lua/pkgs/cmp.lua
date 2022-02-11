@@ -1,5 +1,5 @@
 local cmp = require('cmp')
-
+local luasnip = require('luasnip')
 
 cmp.setup({
 
@@ -18,8 +18,27 @@ cmp.setup({
       select = true,
       behavior = cmp.ConfirmBehavior.replace
     }),
-    ['<Tab>'] = cmp.mapping(cmp.mapping.select_next_item(), { 'i', 's' }),
-    ['<S-Tab>'] = cmp.mapping(cmp.mapping.select_prev_item(), { 'i', 's' })
+
+    ['<Tab>'] = cmp.mapping(function(fallback)
+      if cmp.visible() then
+        cmp.select_next_item()
+      elseif luasnip.expand_or_jumpable() then
+        luasnip.expand_or_jump()
+      else
+        fallback()
+      end
+    end, { "i", "s" }),
+
+    ['<S-Tab>'] = cmp.mapping(function(fallback)
+      if cmp.visible() then
+        cmp.select_prev_item()
+      elseif luasnip.jumpable(-1) then
+        luasnip.jump(-1)
+      else
+        fallback()
+      end
+    end, { "i", "s" }),
+
   },
 
   sources = {
@@ -69,11 +88,7 @@ cmp.setup({
             })[vim_item.kind]
             return vim_item
         end,
-        snippet = {
-            expand = function(args)
-                vim.fn["vsnip#anonymous"](args.body)
-            end
-        },
+
     },
 
 })
