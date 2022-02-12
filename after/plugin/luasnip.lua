@@ -44,28 +44,28 @@ ls.snippets = {
     -- define functions
     s(
       "fn",
-      fmt("function {} ({}) {{\n\t{}\n\treturn\n}}",
+      fmt("function {} ({}) {{\n\t{}\n\treturn;\n}}",
         { i(1, "name"), i(2, "args"), i(3, "body") }
       )
     ),
 
     s(
       "fn_",
-      fmt("function {} () {{\n\t{}\n\treturn\n}}",
+      fmt("function {} () {{\n\t{}\n\treturn;\n}}",
         { i(1, "name"), i(3, "body") }
       )
     ),
 
     s(
       "anfn",
-      fmt("const {}  = ({}) => {{\n\t{}\n\treturn\n}}",
+      fmt("const {}  = ({}) => {{\n\t{}\n\treturn;\n}}",
         { i(1, "name"), i(2, "args"), i(3, "body") }
       )
     ),
     
     s(
       "anfn_",
-      fmt("const {}  = () => {{\n\t{}\n\treturn\n}}",
+      fmt("const {}  = () => {{\n\t{}\n\treturn;\n}}",
         { i(1, "name"), i(3, "body") }
       )
     )
