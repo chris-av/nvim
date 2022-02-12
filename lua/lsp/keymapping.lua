@@ -70,3 +70,10 @@ keymap('n', '<leader>df',
           '<cmd>lua require"telescope".extensions.dap.frames{}<CR>', opts)
 
 
+
+
+-- resource files
+keymap("n", "<leader><leader>s", "<cmd>source ~/.config/nvim/after/plugin/luasnip.lua<CR>", opts)
+
+
+
