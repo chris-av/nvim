@@ -24,34 +24,73 @@ local conds = require("luasnip.extras.expand_conditions")
 
 ls.snippets = {
 
-  all = {
-    ls.parser.parse_snippet("expand", "-- this is what was expanded"),
-
-    -- luasnip.snippet({
-    --   trig = "date",
-    --   namr = "Date",
-    --   dscr = "Date in the form of YYYY-MM-DD"
-    -- })
-
-  },
-
-  lua = {
-    ls.parser.parse_snippet("lf", "local $1 = function($2)\n\t$0\nend"),
-    s("req", fmt("local {} = require('{}')", { i(1, "default"), rep(1) }))
-  },
-
   javascript = {
 
-    s("for",
-    fmt("for (let {}; {}; {}++) {{\n\t{}\n}}",
-    { i(1, "var"), i(2, "var"), i(3, "var"), i(4, "var") }
-    ))
+    -- codeblocks
+    s(
+      "for", 
+      fmt("for (let {}; {}; {}++) {{\n\t{}\n}}", 
+        { i(1, "var"), i(2, "cond"), i(3, "var"), i(4, "codeblock") }
+      )
+    ),
+
+    s(
+      "while", 
+      fmt("while ({}) {{\n\t{}\n}}", 
+        { i(1, "cond"), i(0, "codeblock") }
+      )
+    ),
+    
+    -- define functions
+    s(
+      "fn",
+      fmt("function {} ({}) {{\n\t{}\n\treturn\n}}",
+        { i(1, "name"), i(2, "args"), i(3, "body") }
+      )
+    ),
+
+    s(
+      "fn_",
+      fmt("function {} () {{\n\t{}\n\treturn\n}}",
+        { i(1, "name"), i(3, "body") }
+      )
+    ),
+
+    s(
+      "anfn",
+      fmt("const {}  = ({}) => {{\n\t{}\n\treturn\n}}",
+        { i(1, "name"), i(2, "args"), i(3, "body") }
+      )
+    ),
+    
+    s(
+      "anfn_",
+      fmt("const {}  = () => {{\n\t{}\n\treturn\n}}",
+        { i(1, "name"), i(3, "body") }
+      )
+    )
 
   },
 
-  -- javascriptreact = {
-  --   snippet("")
-  -- }
+  javascriptreact = {
+    s(
+      "f_cmpt",
+      fmt("const {} = () => {{\n\treturn (\n\t\t<div>{}</div>\n\t);\n}}",
+        { i(1, "name"), i(2, "body") }
+      )
+    )
+  },
+
+  python = {
+
+    s(
+      "fn",
+      fmt("def {}({}):\n\t{}\n\treturn",
+        { i(1, "name"), i(2, "args"), i(3, "body") }
+      )
+    )
+
+  }
 
 }
 
