@@ -8,7 +8,7 @@ material.setup({
     NvimTreeFolderIcon = { fg = 'LightBlue' },
     NvimTreeGitNew = { fg = 'red' },
     NvimTreeGitDirty = { fg = 'LightGreen' },
-    NvimTreeGitStaged = { fg = 'LightGreen' } 
+    NvimTreeGitStaged = { fg = 'LightGreen' },
   }
 })
 
