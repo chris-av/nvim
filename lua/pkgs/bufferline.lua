@@ -75,15 +75,15 @@ bufferline.setup {
   },
   highlights = {
 
-    -- separator = {
-    --   guifg = terminal_bg,
-    --   guibg = terminal_bg,
-    -- },
-    -- 
-    -- separator_selected = {
-    --   guifg = terminal_bg,
-    --   guibg = terminal_bg,
-    -- },
+    separator = {
+      guifg = terminal_bg,
+      guibg = terminal_bg,
+    },
+
+    separator_selected = {
+      guifg = 'white',
+      guibg = terminal_bg,
+    },
 
   },
 }
