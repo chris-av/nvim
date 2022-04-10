@@ -39,6 +39,7 @@ local function dapAttach()
     cwd = vim.fn.getcwd(),
     sourceMaps=  true,
     protocol = 'inspector',
+    processId = require('dap.utils').pick_process(),
     skipFiles = { '<node_internals>/**/*.js' }
   })
 end
@@ -59,27 +60,10 @@ local function dapAttachToRemote()
 end
 
 
-local function dapAttachClose()
-  print('closing node adapter')
-  dap.close()
-  dapui.close()
-end
-
-
-local function dapAttachToRemoteClose()
-  print('closing node adapter')
-  dap.close()
-  dapui.close()
-end
-
-
 return {
 
   attach = dapAttach,
   attachToRemote = dapAttachToRemote,
-
-  attachClose = dapAttachClose,
-  attachToRemoteClose = dapAttachToRemoteClose,
 
 }
 

@@ -35,17 +35,16 @@ keymap('n', '<F11>', '<cmd>lua require"dap".step_into()<CR>', opts)
 keymap('n', '<F10>', '<cmd>lua require"dap".step_over()<CR>', opts)
 keymap('n', '<F5>', '<cmd>lua require"dap".continue()<CR>', opts)
 keymap('n', '<F1>', '<cmd>lua require"dap".toggle_breakpoint()<CR>', opts)
-keymap('n', '<leader>da', '<cmd>lua require("debuggers.node").attach()<CR>', opts)
-keymap('n', '<leader>dA', '<cmd>lua require("debuggers.node").attachToRemote()<CR>', opts)
-keymap('n', '<F3>', '<cmd>lua require("debuggers.node").attachClose()<CR>', opts)
-keymap('n', '<F4>', '<cmd>lua require("debuggers.node").attachToRemoteClose()<CR>', opts)
+keymap('n', '<leader>daa', '<cmd>lua require("debuggers.node").attach()<CR>', opts)
+keymap('n', '<leader>dar', '<cmd>lua require("debuggers.node").attachToRemote()<CR>', opts)
+keymap('n', '<F3>', '<cmd>lua require("dapui").close()<CR>', opts)
 
 keymap('n', '<leader>dsc', '<cmd>lua require"dap.ui.variables".scopes()<CR>', opts)
 keymap('n', '<leader>dhh', '<cmd>lua require"dap.ui.variables".hover()<CR>', opts)
 keymap('v', '<leader>dhv',
           '<cmd>lua require"dap.ui.variables".visual_hover()<CR>', opts)
 
-keymap('n', '<leader>duh', '<cmd>lua reuire"dap.ui.widgets".hover()<CR>', opts)
+keymap('n', '<leader>duh', '<cmd>lua require"dap.ui.widgets".hover()<CR>', opts)
 keymap('n', '<leader>duf',
           "<cmd>lua local widgets=require'dap.ui.widgets';widgets.centered_float(widgets.scopes)<CR>", opts)
 
