@@ -29,6 +29,11 @@ keymap('n', '<S-h>', ':bprevious<CR>', opts)
 keymap('n', 'Q', '<cmd>Bdelete!<CR>', opts)
 
 
+-- lazygit
+keymap('n', '<leader>lg', ':FloatermNew lazygit<CR>', opts)
+keymap('n', '<leader>gs', ':Telescope git_status<CR>', opts)
+
+
 -- for debugger
 keymap('n', '<F12>', '<cmd>lua require"dap".step_out()<CR>', opts)
 keymap('n', '<F11>', '<cmd>lua require"dap".step_into()<CR>', opts)
