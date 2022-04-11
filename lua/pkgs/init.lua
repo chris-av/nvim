@@ -9,4 +9,5 @@ require('pkgs.cmp')
 require('pkgs.nvim-autopairs')
 require('pkgs.treesitter')
 require('pkgs.luasnip')
+require('pkgs.floaterm')
 

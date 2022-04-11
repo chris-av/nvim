@@ -30,6 +30,7 @@ packer.startup(function()
       'moll/vim-bbye'
     }
   }
+  use 'voldikss/vim-floaterm'
 
   -- completion
   use 'hrsh7th/nvim-cmp'
