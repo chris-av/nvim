@@ -27,3 +27,4 @@ vim.o.splitright = true
 vim.o.showmode = false
 vim.o.scrolloff = 8
 vim.o.sidescrolloff = 8
+vim.opt.laststatus = 3
