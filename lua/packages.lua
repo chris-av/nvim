@@ -21,6 +21,10 @@ packer.startup(function()
     'nvim-lualine/lualine.nvim',
     requires = { 'kyazdani42/nvim-web-devicons', opt = true }
   }
+  use {
+    "SmiteshP/nvim-gps",
+    require = "nvim-treesitter/nvim-treesitter"
+  }
   use 'tpope/vim-fugitive'
   use 'mhinz/vim-signify'
   use {
@@ -55,7 +59,11 @@ packer.startup(function()
   use 'nvim-telescope/telescope-dap.nvim'
   use 'theHamsta/nvim-dap-virtual-text'
   use 'mfussenegger/nvim-dap-python'
-  use 'Pocco81/DAPInstall.nvim'
+  -- appears that dapinsall is archived, to be replaced by dap-buddy.nvim, keep eye out on new repo
+  -- use {
+  --   'Pocco81/DAPInstall.nvim',
+  --   module = 'dap-install'
+  -- }
   use {
     'rcarriga/nvim-dap-ui',
     requires = {
