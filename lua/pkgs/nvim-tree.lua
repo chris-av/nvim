@@ -212,4 +212,11 @@ vim.api.nvim_set_keymap('n', '<C-l>', '<C-w>l', { noremap = true, silent = true 
 vim.api.nvim_set_keymap('n', '<C-r>', ':mod<CR>', { noremap = true, silent = true })
 
 
+-- auto close
+-- autocmd BufEnter * ++nested if winnr('$') == 1 && bufname() == 'NvimTree_' . tabpagenr() | quit | endif
+vim.api.nvim_create_autocmd('BufEnter', {
+  pattern = { '*' },
+  command = "if winnr('$') == 1 && bufname() == 'NvimTree_' . tabpagenr() | quit | endif",
+  nested = true
+})
 
