@@ -13,6 +13,7 @@ vim.bo.smartindent = true
 vim.o.backspace = 'indent,eol,start'
 vim.o.encoding = 'UTF-8'
 vim.cmd('highlight clear SignColumn')
+vim.o.signcolumn = 'number'
 vim.o.showmatch = true
 vim.o.completeopt = 'menuone,noinsert,noselect'
 vim.wo.wrap = false
