@@ -4,6 +4,9 @@ vim.g.material_style = 'deep ocean'
 
 -- vim.cmd[[ set termguicolors ]] -- this variable must be enabled for colors to be applied properly
 material.setup({
+  disable = {
+    colored_cursor = true,
+  },
   custom_highlights = {
     NvimTreeFolderIcon = { fg = 'LightBlue' },
     NvimTreeGitNew = { fg = 'red' },
