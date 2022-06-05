@@ -21,11 +21,4 @@ material.setup({
 -- vim.cmd[[ highlight NvimTreeGitDirty ctermfg=red guifg=red ]]
 -- vim.cmd[[ highlight NvimTreeGitStaged ctermfg=DarkGreen guifg=LightGreen ]]
 
--- manually set colorscheme
-vim.cmd[[ colorscheme material ]]
-vim.cmd[[ set guifont=Hack\ Nerd\ Font:h12 ]]
-
-if vim.api.nvim_eval("exists('g:neovide')") == 1 then
-  vim.cmd[[ colorscheme material ]]
-end
 
