@@ -56,6 +56,10 @@ packer.startup(function()
     "catppuccin/nvim",
     as = "catppuccin"
   })
+  use({
+    "embark-theme/vim",
+    { as = 'embark', branch = 'main' }
+  })
 
 
   -- debugger
