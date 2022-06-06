@@ -20,6 +20,9 @@ if (iterm_prof == 'Material Deep Ocean') then
   vim.cmd([[ colorscheme material ]])
 elseif (string.match(iterm_prof, 'Catppuccin')) then
   vim.cmd([[ colorscheme catppuccin ]])
+elseif (iterm_prof == 'Embark') then
+  vim.cmd([[ set termguicolors ]])
+  vim.cmd([[ colorscheme embark ]])
 end
 
 
