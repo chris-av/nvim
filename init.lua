@@ -3,7 +3,6 @@ require('configs')
 
 
 
--- vim.api.nvim_create_augroup('skeletons')
 local group_skeleton = vim.api.nvim_create_augroup('skeleton', { clear = true })
 
 vim.api.nvim_create_autocmd('BufNewFile', {
