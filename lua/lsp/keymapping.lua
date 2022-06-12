@@ -42,7 +42,7 @@ keymap('n', '<F5>', '<cmd>lua require"dap".continue()<CR>', opts)
 keymap('n', '<F1>', '<cmd>lua require"dap".toggle_breakpoint()<CR>', opts)
 keymap('n', '<leader>daa', '<cmd>lua require("debuggers.node").attach()<CR>', opts)
 keymap('n', '<leader>dar', '<cmd>lua require("debuggers.node").attachToRemote()<CR>', opts)
-keymap('n', '<F3>', '<cmd>lua require("dapui").close()<CR>', opts)
+keymap('n', '<F3>', '<cmd>lua require("dap").terminate()<CR>', opts)
 
 keymap('n', '<leader>dsc', '<cmd>lua require"dap.ui.variables".scopes()<CR>', opts)
 keymap('n', '<leader>dhh', '<cmd>lua require"dap.ui.variables".hover()<CR>', opts)
