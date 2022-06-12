@@ -1,4 +1,21 @@
-require("dapui").setup({
+local dap = require('dap')
+local dapui = require('dapui')
+
+
+dap.listeners.after.event_initialized["dapui_config"] = function()
+  dapui.open()
+end
+
+dap.listeners.before.event_terminated["dapui_config"] = function()
+  dapui.close()
+end
+
+dap.listeners.before.event_exited["dapui_config"] = function()
+  dapui.close()
+end
+
+
+dapui.setup({
   icons = { expanded = "▾", collapsed = "▸" },
   mappings = {
     -- Use a table to apply multiple mappings
@@ -24,7 +41,7 @@ require("dapui").setup({
     position = "left", -- Can be "left", "right", "top", "bottom"
   },
   tray = {
-    elements = { "repl" },
+    elements = { "repl", "console" },
     size = 10,
     position = "bottom", -- Can be "left", "right", "top", "bottom"
   },
@@ -40,19 +57,4 @@ require("dapui").setup({
 })
 
 
-
-local dap = require("dap")
-local dapui = require("dapui")
-
-dap.listeners.after.event_initialized["dapui_config"] = function()
-  dapui.open()
-end
-
-dap.listeners.before.event_terminated["dapui_config"] = function()
-  dapui.close()
-end
-
-dap.listeners.before.event_exited["dapui_config"] = function()
-  dapui.close()
-end
 
