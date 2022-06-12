@@ -55,7 +55,6 @@ require'nvim-tree'.setup {
   hijack_netrw        = true,
   open_on_setup       = false,
   ignore_ft_on_setup  = {},
-  -- auto_close          = true, -- getting error message that this does not work
   open_on_tab         = true,
   hijack_cursor       = false,
   update_cwd          = false,
@@ -135,10 +134,15 @@ vim.api.nvim_set_keymap('n', '<C-r>', ':mod<CR>', { noremap = true, silent = tru
 
 
 -- auto close
--- autocmd BufEnter * ++nested if winnr('$') == 1 && bufname() == 'NvimTree_' . tabpagenr() | quit | endif
 vim.api.nvim_create_autocmd('BufEnter', {
-  pattern = { '*' },
-  command = "if winnr('$') == 1 && bufname() == 'NvimTree_' . tabpagenr() | quit | endif",
-  nested = true
+  nested = true,
+  callback = function()
+    if #vim.api.nvim_list_wins() == 1 and vim.api.nvim_buf_get_name(0):match('NvimTree_') ~= nil then
+      vim.cmd([[ quit ]])
+    end
+  end
 })
+
+
+
 
