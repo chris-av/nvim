@@ -10,7 +10,7 @@ vim.cmd[[ highlight NvimTreeGitDirty ctermfg=DarkGreen guifg=LightGreen ]]
 vim.cmd[[ highlight NvimTreeGitStaged ctermfg=DarkGreen guifg=LightGreen ]]
 
 
-local tree_cb = require'nvim-tree.config'.nvim_tree_callback
+local tree_cb = require('nvim-tree.config').nvim_tree_callback
 local list = {
   { key = {"<CR>", "o", "<2-LeftMouse>"}, cb = tree_cb("edit") },
   { key = {"<2-RightMouse>", "<C-]>"},    cb = tree_cb("cd") },
