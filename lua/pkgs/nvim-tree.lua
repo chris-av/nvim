@@ -103,6 +103,39 @@ require'nvim-tree'.setup {
     relativenumber = false,
     signcolumn = "yes"
   },
+  renderer = {
+    icons = {
+      glyphs = {
+        default = '',
+        symlink = '',
+        git = {
+          -- untracked = "",
+          -- unstaged = "✗",
+          -- staged = "✓",
+
+          untracked = "✗",
+          unstaged = "",
+          staged = "",
+
+          unmerged = "",
+          renamed = "➜",
+          deleted = "",
+          ignored = "◌"
+        },
+        folder = {
+          arrow_open = "",
+          arrow_closed = "",
+          default = "",
+          open = "",
+          empty = "",
+          empty_open = "",
+          symlink = "",
+          symlink_open = "",
+        }
+      },
+    },
+    special_files=  { "README.md", "Makefile", "MAKEFILE" }
+  },
   actions = {
     open_file = {
       quit_on_open = false,
