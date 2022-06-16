@@ -40,4 +40,7 @@ vim.wo.fillchars = "fold: "
 vim.wo.foldnestmax = 3
 vim.wo.foldminlines = 1
 vim.wo.foldlevel = 99
+vim.opt.guifont = "Hack Nerd Font:h11"
+vim.g.neovide_remember_window = true
 
+vim.cmd([[ set termguicolors ]])

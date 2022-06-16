@@ -3,7 +3,6 @@ local vim = vim
 
 
 -- a list of groups can be found at `:help nvim_tree_highlight`
--- vim.cmd[[ set termguicolors ]]
 vim.cmd[[ highlight NvimTreeFolderIcon ctermfg=blue guifg=blue ]]
 vim.cmd[[ highlight NvimTreeGitNew ctermfg=red guifg=red ]]
 vim.cmd[[ highlight NvimTreeGitDirty ctermfg=DarkGreen guifg=LightGreen ]]
