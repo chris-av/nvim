@@ -58,7 +58,8 @@ packer.startup(function()
   })
   use({
     "embark-theme/vim",
-    { as = 'embark', branch = 'main' }
+    as = 'embark',
+    branch = 'main'
   })
 
 
