@@ -6,7 +6,4 @@ capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
 nvim_lsp['pyright'].setup {
   on_attach = on_attach,
   capabilities = capabilities,
-  flags = {
-    debounce_text_changes = 150,
-  }
 }
