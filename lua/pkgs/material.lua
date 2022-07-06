@@ -1,4 +1,8 @@
-local material = require('material')
+local status_ok, material = pcall(require, 'material')
+if not status_ok then
+  return
+end
+
 
 vim.g.material_style = 'deep ocean'
 

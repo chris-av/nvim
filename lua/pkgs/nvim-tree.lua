@@ -1,4 +1,8 @@
 local vim = vim
+local status_ok, nvim_tree = pcall(require, 'nvim-tree')
+if not status_ok then
+  return
+end
 
 
 
@@ -49,7 +53,7 @@ local list = {
 
 
 
-require'nvim-tree'.setup {
+nvim_tree.setup ({
   disable_netrw       = true,
   hijack_netrw        = true,
   open_on_setup       = false,
@@ -148,7 +152,7 @@ require'nvim-tree'.setup {
     cmd = "trash",
     require_confirm = true
   }
-}
+})
 
 
 

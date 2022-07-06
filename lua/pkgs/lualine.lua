@@ -1,5 +1,14 @@
 -- import nvim-gps first to use in lualine
-local gps = require('nvim-gps')
+local status_ok, gps = pcall(require, 'nvim-gps')
+if not status_ok then
+  return
+end
+
+local status_ok, lualine = pcall(require, 'lualine')
+if not status_ok then
+  return
+end
+
 
 -- Customized config
 gps.setup({
@@ -117,8 +126,9 @@ gps.setup({
 
 
 
+
 -- now call lualine, and extend it with gps
-require('lualine').setup {
+lualine.setup {
   options = {
     icons_enabled = true,
     theme = 'catppuccin',

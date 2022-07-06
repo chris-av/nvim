@@ -1,3 +1,8 @@
+local status_ok, _ = pcall(require, 'nvim-treesitter')
+if not status_ok then
+  return
+end
+
 require('nvim-treesitter.configs').setup({
   ensure_installed = "all",
   sync_install = false,

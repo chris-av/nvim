@@ -1,4 +1,8 @@
-local catppuccin = require('catppuccin')
+local status_ok, catppuccin = pcall(require, 'catppuccin')
+if not status_ok then
+  return
+end
+
 
 -- flavours include dusk, latte, frappe, macchiato, mocha
 local iterm_profile = os.getenv('ITERM_PROFILE')
