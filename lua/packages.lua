@@ -15,6 +15,7 @@ packer.startup(function()
   use 'neovim/nvim-lspconfig'
   use 'kabouzeid/nvim-lspinstall'
   use 'nvim-treesitter/nvim-treesitter'
+  use 'mfussenegger/nvim-jdtls'
 
   -- interface
   use {
