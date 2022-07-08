@@ -16,6 +16,7 @@ packer.startup(function()
   use 'kabouzeid/nvim-lspinstall'
   use 'nvim-treesitter/nvim-treesitter'
   use 'mfussenegger/nvim-jdtls'
+  use 'ziglang/zig.vim'
 
   -- interface
   use {

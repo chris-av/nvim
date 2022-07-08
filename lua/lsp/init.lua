@@ -5,4 +5,5 @@ require('lsp.css')
 require('lsp.html')
 require('lsp.lua-lsp')
 require('lsp.bashls')
+require('lsp.zls')
 
