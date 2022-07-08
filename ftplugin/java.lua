@@ -3,7 +3,6 @@ local on_attach = require('lsp.on_attach')
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
 
-
 local status_ok, jdtls = pcall(require, 'jdtls')
 if not status_ok then
   return
@@ -19,6 +18,12 @@ elseif vim.fn.has == "unix" then
   CONFIG = 'linux'
 else
   print('unsupported system')
+end
+
+
+-- see if jdtls configs are where we expect, if not gracefully exit
+if vim.fn.isdirectory(home .. '/.local/share/nvim/lsp_servers/jdtls') == 0 then
+  return
 end
 
 
