@@ -1,11 +1,13 @@
--- import nvim-gps first to use in lualine
 local status_ok, gps = pcall(require, 'nvim-gps')
+local notifications = require('utils.notifications')
 if not status_ok then
+  notifications.plugin_error('nvim-gps')
   return
 end
 
 local status_ok, lualine = pcall(require, 'lualine')
 if not status_ok then
+  notifications.plugin_error('lualine')
   return
 end
 

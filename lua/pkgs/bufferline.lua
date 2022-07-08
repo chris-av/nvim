@@ -1,5 +1,7 @@
 local status_ok, bufferline = pcall(require, 'bufferline')
+local notifications = require('utils.notifications')
 if not status_ok then
+  notifications.plugin_error('bufferline')
   return
 end
 

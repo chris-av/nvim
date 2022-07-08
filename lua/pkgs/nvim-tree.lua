@@ -1,9 +1,11 @@
-local vim = vim
 local status_ok, nvim_tree = pcall(require, 'nvim-tree')
+local notifications = require('utils.notifications')
 if not status_ok then
+  notifications.plugin_error('nvim-tree')
   return
 end
 
+local vim = vim
 
 
 -- a list of groups can be found at `:help nvim_tree_highlight`

@@ -23,6 +23,9 @@ end
 
 -- see if jdtls configs are where we expect, if not gracefully exit
 if vim.fn.isdirectory(home .. '/.local/share/nvim/lsp_servers/jdtls') == 0 then
+  vim.notify('cannot find jdtls', 'error', {
+    title = 'jdtls error!',
+  })
   return
 end
 

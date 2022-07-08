@@ -1,5 +1,7 @@
 local status_ok, luasnip = pcall(require, 'luasnip')
+local notifications = require('utils.notifications')
 if not status_ok then
+  notifications.plugin_error('luasnip')
   return
 end
 

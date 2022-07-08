@@ -1,5 +1,7 @@
 local status_ok, catppuccin = pcall(require, 'catppuccin')
+local notifications = require('utils.notifications')
 if not status_ok then
+  notifications.plugin_error('catppuccin')
   return
 end
 

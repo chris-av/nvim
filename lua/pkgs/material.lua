@@ -1,5 +1,7 @@
 local status_ok, material = pcall(require, 'material')
+local notifications = require('utils.notifications')
 if not status_ok then
+  notifications.plugin_error('material')
   return
 end
 

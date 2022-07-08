@@ -1,10 +1,13 @@
 local status_ok, cmp = pcall(require, 'cmp')
+local notifications = require('utils.notifications')
 if not status_ok then
+  notifications.plugin_error('cmp')
   return
 end
 
 local status_ok, _ = pcall(require, 'nvim-autopairs')
 if not status_ok then
+  notifications.plugin_error('nvim-autopairs')
   return
 end
 

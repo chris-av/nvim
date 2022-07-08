@@ -1,5 +1,7 @@
 local status_ok, _ = pcall(require, 'nvim-treesitter')
+local notifications = require('utils.notifications')
 if not status_ok then
+  notifications.plugin_error('nvim-treesitter')
   return
 end
 
