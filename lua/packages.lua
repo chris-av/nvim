@@ -36,6 +36,7 @@ packer.startup(function()
     }
   }
   use 'voldikss/vim-floaterm'
+  use 'rcarriga/nvim-notify'
 
   -- completion
   use 'hrsh7th/nvim-cmp'
