@@ -13,7 +13,7 @@ packer.startup(function()
 
   -- lsp
   use 'neovim/nvim-lspconfig'
-  use 'kabouzeid/nvim-lspinstall'
+  use 'williamboman/nvim-lsp-installer'
   use 'nvim-treesitter/nvim-treesitter'
   use 'mfussenegger/nvim-jdtls'
   use 'ziglang/zig.vim'
