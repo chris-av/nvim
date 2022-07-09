@@ -6,9 +6,9 @@ capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
 
 nvim_lsp['zls'].setup {
   on_attach = on_attach,
-  -- cmd = { 'zls' },
-  -- filetypes = { 'zig', 'zir' },
-  -- capabilities = capabilities,
-  -- root = nvim_lsp.util.root_pattern('zls.json', '.git')
+  capabilities = capabilities,
+  cmd = { 'zls' },
+  filetypes = { 'zig', 'zir' },
+  root = nvim_lsp.util.root_pattern('zls.json', '.git')
 }
 
