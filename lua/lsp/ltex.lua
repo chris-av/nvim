@@ -5,6 +5,7 @@ capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
 
 
 nvim_lsp['ltex'].setup({
+  on_attach = on_attach,
   cmd = { 'ltex-ls' },
   filetypes = { 'bib', 'org', 'plaintex', 'rst', 'rnoweb', 'tex' },
 })
