@@ -1,3 +1,7 @@
+local navic = require('nvim-navic')
+
+
+
 -- reserve on attach key remaps for nvim-lsp specific commands
 return function(client, bufnr)
   local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
@@ -30,5 +34,8 @@ return function(client, bufnr)
 
   vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, { border = "single", color = "red" })
   vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, { border = "single" })
+
+  -- nvim navic for lualine
+  navic.attach(client, bufnr)
 
 end
