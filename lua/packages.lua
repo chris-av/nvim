@@ -24,8 +24,8 @@ packer.startup(function()
     requires = { 'kyazdani42/nvim-web-devicons', opt = true }
   }
   use {
-    "SmiteshP/nvim-gps",
-    require = "nvim-treesitter/nvim-treesitter"
+    'SmiteshP/nvim-navic',
+    requires = 'neovim/nvim-lspconfig'
   }
   use 'tpope/vim-fugitive'
   use 'mhinz/vim-signify'
