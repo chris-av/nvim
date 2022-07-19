@@ -1,6 +1,6 @@
 require('pkgs.nvim-notify')
 require('pkgs.bufferline')
--- require('pkgs.github-themes')
+require('pkgs.github-themes')
 require('pkgs.lualine')
 require('pkgs.material')
 require('pkgs.nvim-tree')
