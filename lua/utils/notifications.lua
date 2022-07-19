@@ -7,6 +7,14 @@ M.plugin_error = function(plugin_name)
   })
 end
 
+M.log = function(title, message) 
+  -- can be debug, error, info, trace, or warn
+  -- trace does not show dialog popup
+  vim.notify(message, 'info', {
+    title = title
+  })
+end
+
 
 
 return M
