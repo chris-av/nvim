@@ -64,6 +64,7 @@ packer.startup(function()
     as = 'embark',
     branch = 'main'
   })
+  use 'B4mbus/oxocarbon-lua.nvim'
 
 
   -- debugger

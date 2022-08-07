@@ -12,6 +12,7 @@ require('pkgs.treesitter')
 require('pkgs.luasnip')
 require('pkgs.floaterm')
 require('pkgs.catppuccin')
+require('pkgs.oxocarbon')
 
 
 local iterm_prof = os.getenv('ITERM_PROFILE')
