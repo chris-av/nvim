@@ -18,6 +18,10 @@ require('pkgs.nvim-surround')
 
 local iterm_prof = os.getenv('ITERM_PROFILE')
 
+if (iterm_prof == nil) then
+  return
+end
+
 
 if (iterm_prof == 'Material Deep Ocean') then
   vim.cmd([[ colorscheme material ]])

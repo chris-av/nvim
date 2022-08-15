@@ -9,6 +9,11 @@ end
 -- flavours include dusk, latte, frappe, macchiato, mocha
 local iterm_profile = os.getenv('ITERM_PROFILE')
 
+if (iterm_profile == nil) then
+  -- if not using iterm, just setup catpuccin but don't define flavor yet
+  return
+end
+
 if (string.match(iterm_profile, 'Catppuccin')) then
 
   if (string.match(iterm_profile, 'Frappe')) then
