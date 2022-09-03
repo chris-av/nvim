@@ -15,6 +15,7 @@ packer.startup(function()
   use 'neovim/nvim-lspconfig'
   use 'williamboman/nvim-lsp-installer'
   use 'nvim-treesitter/nvim-treesitter'
+  use 'nvim-treesitter/playground'
   use 'mfussenegger/nvim-jdtls'
   use 'ziglang/zig.vim'
 
