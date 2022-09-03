@@ -1,5 +1,5 @@
-vim.api.nvim_buf_clear_namespace(0, -1, 0, -1)
-vim.opt.syntax = 'reset'
+vim.cmd([[ hi clear ]])
+vim.cmd([[ syntax reset ]])
 vim.opt.termguicolors = true
 
 
