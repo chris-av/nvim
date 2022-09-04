@@ -163,6 +163,9 @@ vim.api.nvim_set_hl(0, 'DiffDelete', { bg = 'None', fg = 'red' })
 vim.api.nvim_set_hl(0, 'BufferLineBackground', { bg = 'None', fg = 'grey' })
 vim.api.nvim_set_hl(0, 'BufferLineCloseButton', { bg = 'None', fg = 'grey' })
 vim.api.nvim_set_hl(0, 'BufferLineCloseButtonSelected', { bg = 'None', fg = 'white' })
+vim.api.nvim_set_hl(0, 'BufferLineModified', { bg = 'None', fg = 'grey' })
+vim.api.nvim_set_hl(0, 'BufferLineModifiedSelected', { bg = 'None', fg = 'white' })
+vim.api.nvim_set_hl(0, 'BufferLineModifiedVisible', { bg = 'None', fg = 'grey' })
 
 
 
