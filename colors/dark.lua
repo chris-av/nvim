@@ -21,6 +21,7 @@ vim.api.nvim_set_hl(0, 'Search', { bold = true, fg = 'black', bg = 'yellow' })
 vim.api.nvim_set_hl(0, 'Visual', { bg = 'darkgrey' })
 vim.api.nvim_set_hl(0, 'VisualNOS', { bold = true })
 vim.api.nvim_set_hl(0, 'Operator', { fg = 'white' })
+vim.api.nvim_set_hl(0, 'Statement', { fg = 'lightgreen' })
 
 
 
