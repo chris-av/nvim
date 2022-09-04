@@ -151,6 +151,13 @@ vim.api.nvim_set_hl(0, 'NvimTreeFolderIcon', { fg = 'cyan' })
 vim.api.nvim_set_hl(0, 'NvimTreeExecFile', { bold = true, fg = 'lightgreen' })
 
 
+-- git signs
+vim.api.nvim_set_hl(0, 'SignColumn', { bg = 'None' })
+vim.api.nvim_set_hl(0, 'DiffAdd', { bg = 'None', fg = 'lightgreen' })
+vim.api.nvim_set_hl(0, 'DiffChange', { bg = 'None', fg = 'lightblue' })
+vim.api.nvim_set_hl(0, 'DiffDelete', { bg = 'None', fg = 'red' })
+
+
 
 
 
