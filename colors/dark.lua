@@ -24,6 +24,13 @@ vim.api.nvim_set_hl(0, 'Operator', { fg = 'white' })
 vim.api.nvim_set_hl(0, 'Statement', { fg = 'lightgreen' })
 
 
+-- primitives
+vim.api.nvim_set_hl(0, 'Boolean', { fg = 'yellow' })
+vim.api.nvim_set_hl(0, 'Number', { fg = 'yellow' })
+vim.api.nvim_set_hl(0, 'String', { fg = '#FF5EFF' })
+
+
+
 
 -- splits, borders and cursor
 vim.api.nvim_set_hl(0, 'VertSplit', { fg = 'None', bg = 'None' } )
