@@ -6,7 +6,7 @@ vim.opt.termguicolors = true
 
 -- basic syntax
 vim.api.nvim_set_hl(0, 'Normal', { fg = 'white' })
-vim.api.nvim_set_hl(0, 'Comment', { fg = '#80a0ff', bold = true })
+vim.api.nvim_set_hl(0, 'Comment', { fg = 'grey', bold = true })
 vim.api.nvim_set_hl(0, 'Constant', { fg = '#FF5EFF' })
 vim.api.nvim_set_hl(0, 'Statement', { fg = 'white' })
 vim.api.nvim_set_hl(0, 'Conditional', { fg = 'white' })
