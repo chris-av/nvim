@@ -67,6 +67,12 @@ packer.startup(function()
     branch = 'main'
   })
   use 'B4mbus/oxocarbon-lua.nvim'
+  use({
+    'cranberry-clockworks/coal.nvim',
+    config = function()
+      require('coal').setup()
+    end
+  })
 
 
   -- debugger
