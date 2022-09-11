@@ -73,6 +73,7 @@ packer.startup(function()
       require('coal').setup()
     end
   })
+  use 'sam4llis/nvim-tundra'
 
 
   -- debugger
