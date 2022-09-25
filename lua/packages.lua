@@ -20,6 +20,7 @@ packer.startup(function()
   use 'ziglang/zig.vim'
 
   -- interface
+  use 'kyazdani42/nvim-web-devicons'
   use {
     'nvim-lualine/lualine.nvim',
     requires = { 'kyazdani42/nvim-web-devicons', opt = true }
@@ -67,12 +68,12 @@ packer.startup(function()
     branch = 'main'
   })
   use 'B4mbus/oxocarbon-lua.nvim'
-  use({
-    'cranberry-clockworks/coal.nvim',
-    config = function()
-      require('coal').setup()
-    end
-  })
+  -- use({
+  --   'cranberry-clockworks/coal.nvim',
+  --   config = function()
+  --     require('coal').setup()
+  --   end
+  -- })
   use 'sam4llis/nvim-tundra'
 
 
