@@ -81,3 +81,10 @@ keymap("n", "<leader><leader>s", "<cmd>source ~/.config/nvim/after/plugin/luasni
 
 
 
+-- expand window
+keymap("n", "<Left>", "<cmd>:vertical resize -2<CR>", opts)
+keymap("n", "<Right>", "<cmd>:vertical resize +2<CR>", opts)
+keymap("n", "<Down>", "<cmd>:resize -2<CR>", opts)
+keymap("n", "<Up>", "<cmd>:resize +2<CR>", opts)
+
+
