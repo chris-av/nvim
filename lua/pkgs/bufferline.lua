@@ -6,6 +6,13 @@ if not status_ok then
 end
 
 
+local status_ok, scope_nvim = pcall(require, 'scope')
+if not status_ok then
+  notifications.plugin_error('scope.nvim')
+  return
+end
+
+
 local terminal_bg = '#0f111a'
 local tab_bg = '#425b67'
 
@@ -95,3 +102,6 @@ bufferline.setup {
 
   },
 }
+
+scope_nvim.setup()
+

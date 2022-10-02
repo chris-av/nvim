@@ -38,6 +38,7 @@ packer.startup(function()
       'moll/vim-bbye'
     }
   }
+  use 'tiagovla/scope.nvim'
   use 'voldikss/vim-floaterm'
   use 'rcarriga/nvim-notify'
 
