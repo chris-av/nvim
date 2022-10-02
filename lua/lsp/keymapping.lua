@@ -27,6 +27,9 @@ keymap('n', 'fh', "<cmd>lua require('telescope.builtin').help_tags()<CR>", opts)
 keymap('n', '<S-l>', ':bnext<CR>', opts)
 keymap('n', '<S-h>', ':bprevious<CR>', opts)
 keymap('n', 'Q', '<cmd>Bdelete!<CR>', opts)
+keymap('n', 'tl', '<cmd>:tabnext<CR>', opts)
+keymap('n', 'th', '<cmd>:tabprev<CR>', opts)
+keymap('n', 'ti', '<cmd>:tabnew<CR>', opts)
 
 
 -- lazygit
