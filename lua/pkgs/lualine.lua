@@ -61,7 +61,7 @@ lualine.setup {
   sections = {
     lualine_a = {'mode'},
     lualine_b = {'branch', 'diff', 'diagnostics'},
-    lualine_c = { { 'filename', path = 1 }, { navic.get_location, cond = navic.is_available }},
+    lualine_c = {{ navic.get_location, cond = navic.is_available }},
     lualine_x = {'encoding', 'fileformat', 'filetype'},
     lualine_y = {},
     lualine_z = {'location'}
@@ -73,6 +73,12 @@ lualine.setup {
     lualine_x = {'location'},
     lualine_y = {},
     lualine_z = {}
+  },
+  winbar = {
+    lualine_z = {{ 'filename', path = 1 }}
+  },
+  inactive_winbar = {
+    lualine_z = {{ 'filename', path = 1 }}
   },
   tabline = {},
   extensions = {}
