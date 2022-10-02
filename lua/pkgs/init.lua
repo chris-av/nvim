@@ -29,7 +29,7 @@ elseif (string.match(iterm_prof, 'Catppuccin')) then
   vim.cmd([[ colorscheme catppuccin ]])
 elseif (iterm_prof == 'Embark') then
   vim.cmd([[ colorscheme embark ]])
-elseif (iterm_prof == 'Dark') then 
+elseif (iterm_prof == 'Dark') then
   vim.cmd([[ colorscheme dark ]])
 end
 
