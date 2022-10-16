@@ -26,9 +26,7 @@ dapui.setup({
     edit = "e",
     repl = "r",
   },
-
   layouts = {
-
     {
       elements = {
         'scopes',
@@ -39,7 +37,6 @@ dapui.setup({
       size = 40,
       position = 'left'
     },
-
     {
       elements = {
         'repl',
