@@ -31,6 +31,8 @@ elseif (iterm_prof == 'Embark') then
   vim.cmd([[ colorscheme embark ]])
 elseif (iterm_prof == 'Dark') then
   vim.cmd([[ colorscheme dark ]])
+elseif (iterm_prof == 'Coal') then
+  vim.cmd([[ colorscheme coal ]])
 end
 
 
