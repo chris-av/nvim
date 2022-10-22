@@ -9,7 +9,7 @@ capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
 nvim_lsp['tailwindcss'].setup {
   on_attach = on_attach,
   cmd = { "tailwindcss-language-server", "--stdio" },
-  tiletypes = {
+  filetypes = {
     "javascript", "javascriptreact",
     "typescript", "typescriptreact",
 
