@@ -29,10 +29,10 @@ dapui.setup({
   layouts = {
     {
       elements = {
-        { id = 'scopes', size = 0.60 },
-        { id = 'breakpoints', size = 0.20 },
+        { id = 'scopes', size = 0.40 },
+        { id = 'watches', size = 0.40 },
+        { id = 'breakpoints', size = 0.10 },
         { id = 'stacks', size = 0.10 },
-        { id = 'watches', size = 0.10 },
       },
       size = 40,
       position = 'left'
