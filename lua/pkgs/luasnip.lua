@@ -9,6 +9,7 @@ end
 local types = require('luasnip.util.types')
 
 require('luasnip.loaders.from_vscode').lazy_load()
+require('snippets')
 
 luasnip.config.set_config({
   history = true,
