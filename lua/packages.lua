@@ -54,7 +54,7 @@ packer.startup(function()
   use 'L3MON4D3/LuaSnip'
   use 'rafamadriz/friendly-snippets'
   use 'numToStr/Comment.nvim'
-  use 'kylechui/nvim-surround' 
+  use 'kylechui/nvim-surround'
 
   -- colorschemes
   use 'marko-cerovac/material.nvim'
