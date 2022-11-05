@@ -30,7 +30,8 @@ packer.startup(function()
     requires = 'neovim/nvim-lspconfig'
   }
   use 'tpope/vim-fugitive'
-  use 'mhinz/vim-signify'
+  -- use 'mhinz/vim-signify'
+  use 'lewis6991/gitsigns.nvim'
   use {
     'akinsho/bufferline.nvim',
     requires = {
