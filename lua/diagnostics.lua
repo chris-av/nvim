@@ -16,6 +16,7 @@ vim.diagnostic.config ({
   underline = false,
   signs = true,
   virtual_text = false,
+  severity_sort = true,
   -- virtual_text = {
   --   spacing = 4,
   --   prefix = ''
