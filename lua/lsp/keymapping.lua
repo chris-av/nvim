@@ -8,6 +8,8 @@ vim.g.localmapleader = " "
 
 -- general
 keymap('n', '<esc><esc>', '<cmd>nohlsearch<CR>', opts)
+keymap('n', '<C-d>', '<C-d>zz', opts)
+keymap('n', '<C-u>', '<C-u>zz', opts)
 
 
 -- nvim tree key bindings
