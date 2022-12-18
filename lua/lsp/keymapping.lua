@@ -88,7 +88,7 @@ vim.keymap.set('n', '<leader>df',
 
 
 -- resource files
-vim.keymap.set("n", "<leader><leader>s", "<cmd>source ~/.config/nvim/after/plugin/luasnip.lua<CR>", { noremap = true, silent = true, desc = "source the lua config again" })
+vim.keymap.set("n", "<leader><leader>s", ":source $MYVIMRC<CR>", { noremap = true, silent = true, desc = "source the lua config again" })
 
 
 
