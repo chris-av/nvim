@@ -16,12 +16,16 @@ vim.keymap.set('n', '<leader>n', '<cmd>NvimTreeFindFile<CR>', { noremap = true, 
 
 
 -- telescope
+vim.keymap.set('n', '<leader>km', "<cmd>lua require('telescope.builtin').keymaps()<CR>", { noremap = true, silent = true, desc = "list keymappings" })
+vim.keymap.set('n', '<leader>co', "<cmd>lua require('telescope.builtin').colorscheme()<CR>", { noremap = true, silent = true, desc = "list colorschemes" })
+vim.keymap.set('n', '<leader>hi', "<cmd>lua require('telescope.builtin').highlights()<CR>", { noremap = true, silent = true, desc = "list highlights" })
 vim.keymap.set('n', 'ff', "<cmd>lua require('telescope.builtin').find_files()<CR>", { noremap = true, silent = true, desc = "find files" })
 vim.keymap.set('n', '<leader>/', function()
   require('telescope.builtin').current_buffer_fuzzy_find(require('telescope.themes').get_dropdown({
     previewer = false,
-  }))
-end, { noremap = true, silent = true, desc = "" })
+  })) end,
+  { noremap = true, silent = true, desc = "find in current buffer" }
+)
 vim.keymap.set('n', 'fg', "<cmd>lua require('telescope.builtin').live_grep()<CR>", { noremap = true, silent = true, desc = "live grep" })
 vim.keymap.set('n', 'fb', "<cmd>lua require('telescope.builtin').buffers()<CR>", { noremap = true, silent = true, desc = "get buffers" })
 vim.keymap.set('n', 'fh', "<cmd>lua require('telescope.builtin').help_tags()<CR>", { noremap = true, silent = true, desc = "help tags" })
