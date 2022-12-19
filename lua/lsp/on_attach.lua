@@ -27,7 +27,7 @@ return function(client, bufnr)
   vim.keymap.set('n', '[d', '<cmd>lua vim.diagnostic.goto_prev({ float = { border = "single" }})<CR>', { noremap = true, silent = true, desc = "Jump to next diagnostic" })
   vim.keymap.set('n', ']d', '<cmd>lua vim.diagnostic.goto_next({ float = { border = "single" }})<CR>', { noremap = true, silent = true, desc = "Jump to previous diagnostic" })
   vim.keymap.set('n', '<space>q', '<cmd>lua vim.diagnostic.set_loclist()<CR>', { noremap = true, silent = true, desc = "Set diagnostic list" })
-  vim.keymap.set('n', '<space>f', '<cmd>lua vim.lsp.buf.format({ async = true })<CR>', { noremap = true, silent = true, desc = "Format" })
+  vim.keymap.set('n', '<space>f', '<cmd>lua vim.lsp.buf.format({ async = true })<CR>', { noremap = true, silent = true, desc = "Format file" })
 
   vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, { border = "single", color = "red" })
   vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, { border = "single" })
