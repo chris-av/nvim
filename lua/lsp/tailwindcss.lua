@@ -24,7 +24,8 @@ nvim_lsp['tailwindcss'].setup {
     "rescript", "vue", "svelte"
   },
 
-  root_dir = nvim_lsp.util.root_pattern('tailwind.config.js', 'tailwind.config.ts', 'postcss.config.js', 'postcss.config.ts'),
+  root_dir = nvim_lsp.util.root_pattern('tailwind.config.js', 'tailwind.config.ts', 'tailwind.config.cjs',
+                                        'postcss.config.js', 'postcss.config.ts', 'postcss.config.cjs'),
 
   settings = {
     tailwindCSS = {
