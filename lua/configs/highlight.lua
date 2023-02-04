@@ -14,6 +14,7 @@ M.lib = {
     LineNr = { fg = 'LightGreen', bg = 'none' },
     CursorLineNr = { bold = true, fg = 'LightGreen' },
     VertSplit = { fg = 'LightGreen', bg = 'none' },
+    MatchParen = { bg = 'none' },
 
 
 
