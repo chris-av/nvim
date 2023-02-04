@@ -9,7 +9,7 @@ M.lib = {
     PmenuSel = { fg = 'white', bg = 'LightGreen' },
     NormalFloat = { fg = 'LightGreen', bg = 'none' },
     FloatBorder = { fg = 'LightGreen', bg = 'none' },
-    NonText = { fg = 'cyan', bg = 'none' },
+    NonText = { fg = 'LightGreen', bg = 'none' },
     CursorLine = { fg = 'none', bg = 'none' },
     LineNr = { fg = 'LightGreen', bg = 'none' },
     CursorLineNr = { bold = true, fg = 'LightGreen' },
