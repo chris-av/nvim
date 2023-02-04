@@ -20,6 +20,7 @@ vim.keymap.set('n', '<leader>km', "<cmd>lua require('telescope.builtin').keymaps
 vim.keymap.set('n', '<leader>co', "<cmd>lua require('telescope.builtin').colorscheme({ enable_preview = true })<CR>", { noremap = true, silent = true, desc = "list colorschemes" })
 vim.keymap.set('n', '<leader>hi', "<cmd>lua require('telescope.builtin').highlights()<CR>", { noremap = true, silent = true, desc = "list highlights" })
 vim.keymap.set('n', 'ff', "<cmd>lua require('telescope.builtin').find_files()<CR>", { noremap = true, silent = true, desc = "find files" })
+vim.keymap.set('n', '<leader>gg', "<cmd>lua require('telescope.builtin').git_commits()<CR>", { noremap = true, silent = true, desc = "list git commits" })
 vim.keymap.set('n', '<leader>/', function()
   require('telescope.builtin').current_buffer_fuzzy_find(require('telescope.themes').get_dropdown({
     previewer = false,
