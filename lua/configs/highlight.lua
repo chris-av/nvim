@@ -49,16 +49,15 @@ M.lib = {
 }
 
 M.highlighter = function(colorscheme)
-  
+
   local function set_hl(hl_group, highlights)
     vim.api.nvim_set_hl(0, hl_group, highlights)
   end
 
-  local theme = M.lib[colorscheme]
-
   for group, val in pairs(M.lib[colorscheme]) do
     set_hl(group, val)
-  end 
+  end
+
 end
 
 return M
