@@ -1,26 +1,48 @@
--- basic highlights
-vim.cmd([[ highlight Pmenu ctermfg=black ctermbg=DarkGreen guifg=black guibg=LightGreen ]])
-vim.cmd([[ highlight PmenuSel ctermfg=white ctermbg=DarkGreen guifg=white guibg=LightGreen ]])
-vim.cmd([[ highlight NormalFloat ctermfg=white ctermbg=black guifg=white guibg=black ]])
-vim.cmd([[ highlight FloatBorder ctermfg=white ctermbg=black guifg=white guibg=black ]])
--- vim.cmd([[ highlight NormalFloat ctermbg=black ]])
--- vim.cmd([[ highlight NormalFloat ctermbg=black ]])
-vim.cmd([[ highlight CursorLine cterm=NONE ctermfg=NONE ctermbg=NONE guifg=NONE guibg=NONE ]])
-vim.cmd([[ highlight LineNr ctermbg=NONE guibg=NONE guifg=LightGreen ]])
-vim.cmd([[ highlight CursorLineNR cterm=bold gui=bold ]])
-vim.cmd([[ highlight VertSplit ctermbg=DarkGreen ctermfg=black ctermbg=black guifg=black guibg=black ]])
+
+M = {}
 
 
--- diagnostics
-vim.cmd([[hi DiagnosticsError ctermfg=red]])
-vim.cmd([[hi DiagnosticHint ctermfg=blue]])
-vim.cmd([[hi DiagnosticsWarning ctermfg=yellow]])
-vim.cmd([[hi DiagnosticsInformation ctermfg=yellow]])
+M.lib = {
+
+  matrix = {
+    Pmenu = { fg = 'black', bg = 'LightGreen' },
+    PmenuSel = { fg = 'white', bg = 'LightGreen' },
+    NormalFloat = { fg = 'LightGreen', bg = 'none' },
+    FloatBorder = { fg = 'LightGreen', bg = 'none' },
+    NonText = { fg = 'cyan', bg = 'none' },
+    CursorLine = { fg = 'none', bg = 'none' },
+    LineNr = { fg = 'LightGreen', bg = 'none' },
+    CursorLineNr = { bold = true, fg = 'LightGreen' },
+    VertSplit = { fg = 'LightGreen', bg = 'none' },
 
 
--- vim-signify
-vim.cmd([[ highlight SignifySignAdd ctermfg=green guifg=#00ff00 cterm=NONE gui=NONE ]])
-vim.cmd([[ highlight SignifySignDelete ctermfg=red guifg=#00ff00 cterm=NONE gui=NONE ]])
-vim.cmd([[ highlight SignifySignChange ctermfg=yellow guifg=#00ff00 cterm=NONE gui=NONE ]])
 
+    Identifier = { fg = 'LightGreen' },
+    String = { fg = 'Yellow4', bold = false, },
+    Constant = { fg = 'LightGreen', bold = false },
+    Comment = { fg = 'Yellow4', bold = false, italic = true  },
+    Number = { fg = 'LightGreen', bold = false },
+    Function = { fg = 'LightGreen', },
 
+    PreProc = { fg = 'LightGreen', },
+
+    -- Nvim Tree
+    NvimTreeFolderIcon = { fg = 'cyan', bg = 'none' },
+
+  },
+
+}
+
+M.highlighter = function(colorscheme)
+  local function set_hl(hl_group, highlights)
+    vim.api.nvim_set_hl(0, hl_group, highlights)
+  end
+
+  local theme = M.lib[colorscheme]
+
+  for group, val in pairs(M.lib[colorscheme]) do
+    set_hl(group, val)
+  end 
+end
+
+return M
