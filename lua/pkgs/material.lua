@@ -17,6 +17,9 @@ material.setup({
     NvimTreeGitNew = { fg = 'red' },
     NvimTreeGitDirty = { fg = 'LightGreen' },
     NvimTreeGitStaged = { fg = 'LightGreen' },
+    GitSignsAdd = { fg = 'LightGreen', bg = 'none' },
+    GitSignsChange = { fg = 'blue', bg = 'none' },
+    GitSignsDelete = { fg = 'red', bg = 'none' },
   }
 })
 

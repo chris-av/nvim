@@ -26,8 +26,19 @@ M.lib = {
 
     PreProc = { fg = 'LightGreen', },
 
+    DiagnosticError  = { fg = 'red', bold = true },
+    DiagnosticInfo  = { fg = 'blue', bold = true },
+    DiagnosticWarn  = { fg = 'yellow', bold = true },
+    DiagnosticHint  = { fg = 'LightGreen', bold = true },
+
+
     -- Nvim Tree
     NvimTreeFolderIcon = { fg = 'cyan', bg = 'none' },
+
+    -- GitSigns
+    GitSignsAdd = { fg = 'LightGreen', bg = 'none' },
+    GitSignsChange = { fg = 'LightGreen', bg = 'none' },
+    GitSignsDelete = { bg = 'none' },
 
   },
 
