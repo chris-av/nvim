@@ -21,8 +21,6 @@ local conds = require("luasnip.extras.expand_conditions")
 
 
 
-print('creating snippet')
-
 ls.add_snippets(nil, {
   javascript = {
 
