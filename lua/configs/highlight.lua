@@ -41,11 +41,15 @@ M.lib = {
     GitSignsChange = { fg = 'LightGreen', bg = 'none' },
     GitSignsDelete = { bg = 'none' },
 
+    -- Cmp
+    CmpItemKind = { fg = 'black', bg = 'none' },
+
   },
 
 }
 
 M.highlighter = function(colorscheme)
+  
   local function set_hl(hl_group, highlights)
     vim.api.nvim_set_hl(0, hl_group, highlights)
   end
