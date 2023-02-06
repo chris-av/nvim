@@ -24,6 +24,7 @@ M.lib = {
     Comment = { fg = 'Yellow4', bold = false, italic = true  },
     Number = { fg = 'LightGreen', bold = false },
     Function = { fg = 'LightGreen', },
+    Folded = { bg = 'none', fg = 'LightGreen', bold = true, italic = true, },
 
     PreProc = { fg = 'LightGreen', },
 
