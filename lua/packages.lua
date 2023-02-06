@@ -42,6 +42,7 @@ packer.startup(function()
   use 'tiagovla/scope.nvim'
   use 'voldikss/vim-floaterm'
   use 'rcarriga/nvim-notify'
+  use {'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async'}
 
   -- completion
   use 'hrsh7th/nvim-cmp'
