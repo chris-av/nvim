@@ -34,6 +34,15 @@ M.lib = {
     DiagnosticWarn  = { fg = 'yellow', bold = true },
     DiagnosticHint  = { fg = 'LightGreen', bold = true },
 
+    -- bufferline
+    BufferLineBufferSelected = { fg = 'LightGreen', bg = 'none', italic = true, bold = true },
+    BufferLineBackground = { fg = 'LightGreen', bg = 'none' },
+    BufferLineCloseButton = { fg = 'LightGreen', bg = 'none' },
+    BufferLineCloseButtonVisible = { fg = 'LightGreen', bg = 'none' },
+    BufferLineCloseButtonSelected = { fg = 'LightGreen', bg = 'none' },
+    BufferLineInfoVisible = { fg = 'LightGreen', bg = 'none' },
+    BufferLineBuffer = { fg = 'LightGreen', bg = 'none' },
+    BufferLineBufferVisible = { fg = 'LightGreen', bg = 'none' },
 
     -- Nvim Tree
     NvimTreeFolderIcon = { fg = 'cyan', bg = 'none' },
