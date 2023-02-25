@@ -17,8 +17,6 @@ require('pkgs.nvim-surround')
 require('pkgs.silicon')
 -- require('pkgs.oxocarbon')
 
-local colorUtil = require('configs.highlight')
-
 
 local iterm_prof = os.getenv('ITERM_PROFILE')
 
@@ -38,7 +36,7 @@ elseif (iterm_prof == 'Dark') then
 elseif (iterm_prof == 'Coal') then
   vim.cmd([[ colorscheme coal ]])
 elseif (iterm_prof == 'Matrix Theme') then
-  M.highlighter('matrix')
+  vim.cmd([[ colorscheme matrix ]])
 end
 
 
