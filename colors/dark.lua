@@ -1,149 +1,133 @@
-vim.cmd([[ hi clear ]])
-vim.cmd([[ syntax reset ]])
+vim.cmd "hi clear"
+vim.cmd "set termguicolors"
 vim.opt.termguicolors = true
 
 
 
--- basic syntax
-vim.api.nvim_set_hl(0, 'Normal', { fg = 'white' })
-vim.api.nvim_set_hl(0, 'Comment', { fg = 'grey', bold = true })
-vim.api.nvim_set_hl(0, 'Constant', { fg = '#FF5EFF' })
-vim.api.nvim_set_hl(0, 'Statement', { fg = 'white' })
-vim.api.nvim_set_hl(0, 'Conditional', { fg = 'white' })
-vim.api.nvim_set_hl(0, 'Identifier', { fg = '#40ffff' })
-vim.api.nvim_set_hl(0, 'Include', { fg = 'lightgreen' })
-vim.api.nvim_set_hl(0, 'Function', { fg = 'white' })
-vim.api.nvim_set_hl(0, 'Keyword', { fg = 'lightgreen' })
-vim.api.nvim_set_hl(0, 'Error', { bg = 'red' })
-vim.api.nvim_set_hl(0, 'Directory', { fg = 'cyan' })
-vim.api.nvim_set_hl(0, 'NonText', { fg = 'none' })
-vim.api.nvim_set_hl(0, 'IncSearch', { bold = true, bg = 'yellow', fg = 'black' })
-vim.api.nvim_set_hl(0, 'Search', { bold = true, fg = 'black', bg = 'yellow' })
-vim.api.nvim_set_hl(0, 'Visual', { bg = 'darkgrey' })
-vim.api.nvim_set_hl(0, 'VisualNOS', { bold = true })
-vim.api.nvim_set_hl(0, 'Operator', { fg = 'white' })
-vim.api.nvim_set_hl(0, 'Statement', { fg = 'lightgreen' })
+local dark = {
+  Normal =  { fg = 'white' },
+  Comment =  { fg = 'grey', bold = true },
+  Constant =  { fg = '#FF5EFF' },
+  Conditional =  { fg = 'white' },
+  Identifier =  { fg = '#40ffff' },
+  Include =  { fg = 'lightgreen' },
+  Function =  { fg = 'white' },
+  Keyword =  { fg = 'lightgreen' },
+  Error =  { bg = 'red' },
+  Directory =  { fg = 'cyan' },
+  NonText =  { fg = 'none' },
+  IncSearch =  { bold = true, bg = 'yellow', fg = 'black' },
+  Search =  { bold = true, fg = 'black', bg = 'yellow' },
+  Visual =  { bg = 'darkgrey' },
+  VisualNOS =  { bold = true },
+  Operator =  { fg = 'white' },
+  Statement =  { fg = 'lightgreen' },
 
 
--- primitives
-vim.api.nvim_set_hl(0, 'Boolean', { fg = 'yellow' })
-vim.api.nvim_set_hl(0, 'Number', { fg = 'yellow' })
-vim.api.nvim_set_hl(0, 'String', { fg = '#FF5EFF' })
+  -- primitives
+  Boolean =  { fg = 'yellow' },
+  Number =  { fg = 'yellow' },
+  String =  { fg = '#FF5EFF' },
+
+  -- splits, borders and cursor
+  VertSplit =  { fg = 'None', bg = 'None' },
+  FloatBoarder =  { fg = 'None' },
+  WinSeparator =  { bg = 'None' },
+
+  -- tabline
+  TabLine =  { bg = 'darkgrey' },
+  TabLineSel =  { bold = true },
+  TabLineFill =  { reverse = true },
+  ToolbarLine =  { bg = 'grey50' },
+  ToolbarButton =  { bg = 'lightgrey' },
+
+  -- visual, selections, line numbers
+  Pmenu =  { bg = 'None' },
+  PmenuSel =  { bg = 'darkgrey' },
+  PmenuSbar =  { bg = 'grey' },
+  PmenuThumb =  { bg = 'black' },
+  NormalFloat =  { fg = 'None', bg = 'None' },
+  LineNr =  { fg = '#00EA8C' },
+  LineNrAbove =  { fg = 'None', bg = 'None' },
+  LineNrBelow =  { fg = 'None', bg = 'None' },
+  CursorLine =  { fg = 'None', bg = 'None' },
+  CursorColumn =  { bg = 'grey40' },
+  CursorLineNr =  { bold = true, fg = 'lightgreen' },
+
+  -- status line
+  StatusLineTerm =  { bg = 'lightgreen' },
+  StatusLineTermNC =  { bg = 'lightgreen' },
+  StatusLine =  { bold = true },
+  StatusLineNC =  { reverse = true },
+
+  -- spelling?
+  SpellBad =  { sp = 'red' },
+  SpellCap =  { sp = 'blue' },
+  SpellRare =  { sp = 'magenta' },
+  SpellLocal =  { sp = 'cyan' },
+
+  -- special
+  SpecialKey =  { fg = 'cyan' },
+  ErrorMsg =  { fg = 'red' },
+  MoreMsg =  { fg = 'seagreen' },
+  ModeMsg =  { bold = true },
+  Question =  { fg = 'green' },
+  Title =  { fg = 'magenta' },
+  WarningMsg =  { fg = 'red' },
+  WildMenu =  { fg = 'yellow' },
+  Folded =  { bg = 'darkgrey' },
+  FoldColumn =  { bg = 'grey' },
+  DiffText =  { bg = 'red' },
+  Conceal =  { bg = 'darkgrey' },
+  ColorColumn =  { fg = '' },
+  MatchParen =  { fg = '' },
+  Special =  { fg = 'white' },
+  PreProc =  { fg = '#ff80ff' },
+  Type =  { fg = '#60ff60' },
+  Underlined =  { fg = '#80a0ff' },
+  Ignore =  { fg = '' },
+  Todo =  { bg = 'yellow' },
+
+  -- use TS highlights
+  TSKeyWordFunction =  { bold = true, fg = '#00ffff' },
+  TSMethod =  { bold = true, fg = 'skyblue1' },
+  TSConstructor =  { bold = true, fg = 'skyblue1' },
+  -- TSException =  { fg = '' }, guifg=lightgreen
+  TSConditional =  { bold = false, fg = 'lightgreen' },
+  TSRepeat =  { bold = false, fg = 'lightgreen' },
+
+  -- Nvim Tree highlights
+  NvimTreeFolderIcon =  { fg = 'cyan' },
+  NvimTreeExecFile =  { bold = true, fg = 'lightgreen' },
+
+  -- git signs
+  SignColumn =  { bg = 'None' },
+  DiffAdd =  { bg = 'None', fg = 'lightgreen' },
+  DiffChange =  { bg = 'None', fg = 'lightblue' },
+  DiffDelete =  { bg = 'None', fg = 'red' },
+
+  -- bufferline
+  BufferLineBackground =  { bg = 'None', fg = 'grey' },
+  BufferLineCloseButton =  { bg = 'None', fg = 'grey' },
+  BufferLineCloseButtonSelected =  { bg = 'None', fg = 'white' },
+  BufferLineModified =  { bg = 'None', fg = 'grey' },
+  BufferLineModifiedSelected =  { bg = 'None', fg = 'white' },
+  BufferLineModifiedVisible =  { bg = 'None', fg = 'grey' },
 
 
-
-
--- splits, borders and cursor
-vim.api.nvim_set_hl(0, 'VertSplit', { fg = 'None', bg = 'None' } )
-vim.api.nvim_set_hl(0, 'FloatBoarder', { fg = 'None' })
-vim.api.nvim_set_hl(0, 'WinSeparator', { bg = 'None' })
-
-
-
--- tabline
-vim.api.nvim_set_hl(0, 'TabLine', { bg = 'darkgrey' })
-vim.api.nvim_set_hl(0, 'TabLineSel', { bold = true })
-vim.api.nvim_set_hl(0, 'TabLineFill', { reverse = true })
-vim.api.nvim_set_hl(0, 'ToolbarLine', { bg = 'grey50' })
-vim.api.nvim_set_hl(0, 'ToolbarButton', { bg = 'lightgrey' })
-
-
-
--- visual, selections, line numbers
-vim.api.nvim_set_hl(0, 'Pmenu', { bg = 'None' })
-vim.api.nvim_set_hl(0, 'PmenuSel', { bg = 'darkgrey' })
-vim.api.nvim_set_hl(0, 'PmenuSbar', { bg = 'grey' })
-vim.api.nvim_set_hl(0, 'PmenuThumb', { bg = 'black' })
-vim.api.nvim_set_hl(0, 'NormalFloat', { fg = 'None', bg = 'None' })
-vim.api.nvim_set_hl(0, 'NormalFloat', { fg = 'None', bg = 'None' })
-vim.api.nvim_set_hl(0, 'LineNr', { fg = '#00EA8C' })
-vim.api.nvim_set_hl(0, 'LineNrAbove', { fg = 'None', bg = 'None' })
-vim.api.nvim_set_hl(0, 'LineNrBelow', { fg = 'None', bg = 'None' })
-vim.api.nvim_set_hl(0, 'CursorLine', { fg = 'None', bg = 'None' })
-vim.api.nvim_set_hl(0, 'CursorColumn', { bg = 'grey40' })
-vim.api.nvim_set_hl(0, 'CursorLineNr', { bold = true, fg = 'lightgreen' })
-
-
-
-
--- status line
-vim.api.nvim_set_hl(0, 'StatusLineTerm', { bg = 'lightgreen' })
-vim.api.nvim_set_hl(0, 'StatusLineTermNC', { bg = 'lightgreen' })
-vim.api.nvim_set_hl(0, 'StatusLine', { bold = true })
-vim.api.nvim_set_hl(0, 'StatusLineNC', { reverse = true })
-
-
--- spelling?
--- what is gui=undercurl?
-vim.api.nvim_set_hl(0, 'SpellBad', { sp = 'red' })
-vim.api.nvim_set_hl(0, 'SpellCap', { sp = 'blue' })
-vim.api.nvim_set_hl(0, 'SpellRare', { sp = 'magenta' })
-vim.api.nvim_set_hl(0, 'SpellLocal', { sp = 'cyan' })
-
-
-
-
--- special
-vim.api.nvim_set_hl(0, 'SpecialKey', { fg = 'cyan' })
-vim.api.nvim_set_hl(0, 'ErrorMsg', { fg = 'red' })
-vim.api.nvim_set_hl(0, 'MoreMsg', { fg = 'seagreen' })
-vim.api.nvim_set_hl(0, 'ModeMsg', { bold = true })
-vim.api.nvim_set_hl(0, 'Question', { fg = 'green' })
-vim.api.nvim_set_hl(0, 'Title', { fg = 'magenta' })
-vim.api.nvim_set_hl(0, 'WarningMsg', { fg = 'red' })
-vim.api.nvim_set_hl(0, 'WildMenu', { fg = 'yellow' })
-vim.api.nvim_set_hl(0, 'Folded', { bg = 'darkgrey' })
-vim.api.nvim_set_hl(0, 'FoldColumn', { bg = 'grey' })
-vim.api.nvim_set_hl(0, 'DiffAdd', { bg = 'darkblue' })
-vim.api.nvim_set_hl(0, 'DiffChange', { bg = 'darkmagenta' })
-vim.api.nvim_set_hl(0, 'DiffDelete', { bg = 'darkcyan' })
-vim.api.nvim_set_hl(0, 'DiffText', { bg = 'red' })
-vim.api.nvim_set_hl(0, 'SignColumn', { bg = 'grey' })
-vim.api.nvim_set_hl(0, 'Conceal', { bg = 'darkgrey' })
-vim.api.nvim_set_hl(0, 'ColorColumn', { fg = '' })
-vim.api.nvim_set_hl(0, 'MatchParen', { fg = '' })
-vim.api.nvim_set_hl(0, 'Special', { fg = 'white' })
-vim.api.nvim_set_hl(0, 'PreProc', { fg = '#ff80ff' })
-vim.api.nvim_set_hl(0, 'Type', { fg = '#60ff60' })
-vim.api.nvim_set_hl(0, 'Underlined', { fg = '#80a0ff' })
-vim.api.nvim_set_hl(0, 'Ignore', { fg = '' })
-vim.api.nvim_set_hl(0, 'Todo', { bg = 'yellow' })
-
-
--- use TS highlights
-vim.api.nvim_set_hl(0, 'TSKeyWordFunction', { bold = true, fg = '#00ffff' })
-vim.api.nvim_set_hl(0, 'TSMethod', { bold = true, fg = 'skyblue1' })
-vim.api.nvim_set_hl(0, 'TSConstructor', { bold = true, fg = 'skyblue1' })
--- vim.api.nvim_set_hl(0, 'TSException', { fg = '' }) guifg=lightgreen
-vim.api.nvim_set_hl(0, 'TSConditional', { bold = false, fg = 'lightgreen' })
-vim.api.nvim_set_hl(0, 'TSRepeat', { bold = false, fg = 'lightgreen' })
-
-
+}
 
 
 
--- Nvim Tree highlights
-vim.api.nvim_set_hl(0, 'NvimTreeFolderIcon', { fg = 'cyan' })
-vim.api.nvim_set_hl(0, 'NvimTreeExecFile', { bold = true, fg = 'lightgreen' })
-
-
--- git signs
-vim.api.nvim_set_hl(0, 'SignColumn', { bg = 'None' })
-vim.api.nvim_set_hl(0, 'DiffAdd', { bg = 'None', fg = 'lightgreen' })
-vim.api.nvim_set_hl(0, 'DiffChange', { bg = 'None', fg = 'lightblue' })
-vim.api.nvim_set_hl(0, 'DiffDelete', { bg = 'None', fg = 'red' })
+local function set_hl(hl_group, highlights)
+  vim.api.nvim_set_hl(0, hl_group, highlights)
+end
 
 
 
--- bufferline
-vim.api.nvim_set_hl(0, 'BufferLineBackground', { bg = 'None', fg = 'grey' })
-vim.api.nvim_set_hl(0, 'BufferLineCloseButton', { bg = 'None', fg = 'grey' })
-vim.api.nvim_set_hl(0, 'BufferLineCloseButtonSelected', { bg = 'None', fg = 'white' })
-vim.api.nvim_set_hl(0, 'BufferLineModified', { bg = 'None', fg = 'grey' })
-vim.api.nvim_set_hl(0, 'BufferLineModifiedSelected', { bg = 'None', fg = 'white' })
-vim.api.nvim_set_hl(0, 'BufferLineModifiedVisible', { bg = 'None', fg = 'grey' })
 
-
-
+for group, val in pairs(dark) do
+  set_hl(group, val)
+end
 
 
