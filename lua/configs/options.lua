@@ -47,4 +47,3 @@ vim.g.neovide_remember_window = true
 -- will get over written by other plugins
 -- I this does not work with nvim-tree since you need to rerun this on every new buffer
 vim.opt.winbar = "%=%m %f"
-vim.cmd([[ set termguicolors ]])
