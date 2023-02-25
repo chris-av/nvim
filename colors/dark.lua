@@ -110,39 +110,6 @@ vim.api.nvim_set_hl(0, 'Ignore', { fg = '' })
 vim.api.nvim_set_hl(0, 'Todo', { bg = 'yellow' })
 
 
-
--- vim.api.nvim_set_hl(0, 'link', { fg = '' }) NonText EndOfBuffer
--- vim.api.nvim_set_hl(0, 'link', { fg = '' }) Search CurSearch
--- vim.api.nvim_set_hl(0, 'link', { fg = '' }) SignColumn CursorLineSign
--- vim.api.nvim_set_hl(0, 'link', { fg = '' }) FoldColumn CursorLineFold
--- vim.api.nvim_set_hl(0, 'link', { fg = '' }) Constant String
--- vim.api.nvim_set_hl(0, 'link', { fg = '' }) Constant Character
--- vim.api.nvim_set_hl(0, 'link', { fg = '' }) Constant Number
--- vim.api.nvim_set_hl(0, 'link', { fg = '' }) Constant Boolean
--- vim.api.nvim_set_hl(0, 'link', { fg = '' }) Number Float
--- vim.api.nvim_set_hl(0, 'link', { fg = '' }) Identifier Function
--- vim.api.nvim_set_hl(0, 'link', { fg = '' }) Statement Conditional
--- vim.api.nvim_set_hl(0, 'link', { fg = '' }) Statement Repeat
--- vim.api.nvim_set_hl(0, 'link', { fg = '' }) Statement Label
--- vim.api.nvim_set_hl(0, 'link', { fg = '' }) Statement Operator
--- vim.api.nvim_set_hl(0, 'link', { fg = '' }) Search highlight
--- vim.api.nvim_set_hl(0, 'link', { fg = '' }) Statement Keyword
--- vim.api.nvim_set_hl(0, 'link', { fg = '' }) Statement Exception
--- vim.api.nvim_set_hl(0, 'link', { fg = '' }) PreProc Include
--- vim.api.nvim_set_hl(0, 'link', { fg = '' }) PreProc Define
--- vim.api.nvim_set_hl(0, 'link', { fg = '' }) PreProc Macro
--- vim.api.nvim_set_hl(0, 'link', { fg = '' }) PreProc PreCondit
--- vim.api.nvim_set_hl(0, 'link', { fg = '' }) Type StorageClass
--- vim.api.nvim_set_hl(0, 'link', { fg = '' }) Type Structure
--- vim.api.nvim_set_hl(0, 'link', { fg = '' }) Type Typedef
--- vim.api.nvim_set_hl(0, 'link', { fg = '' }) Special Tag
--- vim.api.nvim_set_hl(0, 'link', { fg = '' }) Special SpecialChar
--- vim.api.nvim_set_hl(0, 'link', { fg = '' }) Special Delimiter
--- vim.api.nvim_set_hl(0, 'link', { fg = '' }) Special SpecialComment
--- vim.api.nvim_set_hl(0, 'link', { fg = '' }) Special Debug
-
-
-
 -- use TS highlights
 vim.api.nvim_set_hl(0, 'TSKeyWordFunction', { bold = true, fg = '#00ffff' })
 vim.api.nvim_set_hl(0, 'TSMethod', { bold = true, fg = 'skyblue1' })
