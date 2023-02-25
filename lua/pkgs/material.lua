@@ -24,9 +24,4 @@ material.setup({
 })
 
 
--- vim.cmd[[ highlight NvimTreeFolderIcon ctermfg=blue guifg=blue ]]
--- vim.cmd[[ highlight NvimTreeGitNew ctermfg=blue guifg=blue ]]
--- vim.cmd[[ highlight NvimTreeGitDirty ctermfg=red guifg=red ]]
--- vim.cmd[[ highlight NvimTreeGitStaged ctermfg=DarkGreen guifg=LightGreen ]]
-
 
