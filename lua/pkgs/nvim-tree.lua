@@ -9,10 +9,10 @@ local vim = vim
 
 
 -- a list of groups can be found at `:help nvim_tree_highlight`
-vim.cmd[[ highlight NvimTreeFolderIcon ctermfg=blue guifg=blue ]]
-vim.cmd[[ highlight NvimTreeGitNew ctermfg=red guifg=red ]]
-vim.cmd[[ highlight NvimTreeGitDirty ctermfg=DarkGreen guifg=LightGreen ]]
-vim.cmd[[ highlight NvimTreeGitStaged ctermfg=DarkGreen guifg=LightGreen ]]
+vim.cmd" highlight NvimTreeFolderIcon ctermfg=blue guifg=blue "
+vim.cmd" highlight NvimTreeGitNew ctermfg=red guifg=red "
+vim.cmd" highlight NvimTreeGitDirty ctermfg=DarkGreen guifg=LightGreen "
+vim.cmd" highlight NvimTreeGitStaged ctermfg=DarkGreen guifg=LightGreen "
 
 
 local tree_cb = require('nvim-tree.config').nvim_tree_callback
@@ -170,7 +170,7 @@ vim.api.nvim_create_autocmd('BufEnter', {
   nested = true,
   callback = function()
     if #vim.api.nvim_list_wins() == 1 and vim.api.nvim_buf_get_name(0):match('NvimTree_') ~= nil then
-      vim.cmd([[ quit ]])
+      vim.cmd " quit "
     end
   end
 })
