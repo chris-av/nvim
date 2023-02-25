@@ -38,17 +38,17 @@ end
 
 
 if (iterm_prof == 'Material Deep Ocean') then
-  vim.cmd([[ colorscheme material ]])
+  vim.cmd" colorscheme material "
 elseif (string.match(iterm_prof, 'Catppuccin')) then
-  vim.cmd([[ colorscheme catppuccin ]])
+  vim.cmd" colorscheme catppuccin "
 elseif (iterm_prof == 'Embark') then
-  vim.cmd([[ colorscheme embark ]])
+  vim.cmd" colorscheme embark "
 elseif (iterm_prof == 'Dark') then
-  vim.cmd([[ colorscheme dark ]])
+  vim.cmd" colorscheme dark "
 elseif (iterm_prof == 'Coal') then
-  vim.cmd([[ colorscheme coal ]])
+  vim.cmd" colorscheme coal "
 elseif (iterm_prof == 'Matrix Theme') then
-  vim.cmd([[ colorscheme matrix ]])
+  vim.cmd" colorscheme matrix "
 end
 
 
