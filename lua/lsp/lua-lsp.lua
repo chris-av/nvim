@@ -1,4 +1,4 @@
-local on_attach = require('lsp.on_attach') 
+local on_attach = require('lsp.on_attach')
 local nvim_lsp = require('lspconfig')
 local fn = vim.fn
 local capabilities = vim.lsp.protocol.make_client_capabilities()
