@@ -31,6 +31,7 @@ vim.o.sidescrolloff = 8
 vim.opt.laststatus = 3
 vim.wo.foldmethod = "expr"
 vim.wo.foldexpr = "nvim_treesitter#foldexpr()"
+vim.opt.termguicolors = true
 
 
 -- setting folds
