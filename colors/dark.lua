@@ -75,10 +75,10 @@ vim.api.nvim_set_hl(0, 'StatusLineNC', { reverse = true })
 
 -- spelling?
 -- what is gui=undercurl?
-vim.api.nvim_set_hl(0, 'SpellBad', { sp = 'red' })       
-vim.api.nvim_set_hl(0, 'SpellCap', { sp = 'blue' })       
-vim.api.nvim_set_hl(0, 'SpellRare', { sp = 'magenta' })      
-vim.api.nvim_set_hl(0, 'SpellLocal', { sp = 'cyan' })     
+vim.api.nvim_set_hl(0, 'SpellBad', { sp = 'red' })
+vim.api.nvim_set_hl(0, 'SpellCap', { sp = 'blue' })
+vim.api.nvim_set_hl(0, 'SpellRare', { sp = 'magenta' })
+vim.api.nvim_set_hl(0, 'SpellLocal', { sp = 'cyan' })
 
 
 
