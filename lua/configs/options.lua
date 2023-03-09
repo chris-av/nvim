@@ -31,14 +31,7 @@ vim.opt.laststatus = 3
 vim.wo.foldmethod = "expr"
 vim.wo.foldexpr = "nvim_treesitter#foldexpr()"
 vim.opt.termguicolors = true
-
-
--- setting folds
--- vim.wo.foldtext = [[substitute(getline(v:foldstart),'\\t',repeat('\ ',&tabstop),'g').'...'.trim(getline(v:foldend)) . ' (' . (v:foldend - v:foldstart + 1) . ' lines)']]
-vim.wo.foldtext = [[substitute(getline(v:foldstart),'\\t',repeat('\ ',&tabstop),'g').'...'.trim(getline(v:foldend))]]
-vim.wo.fillchars = "fold: "
-vim.wo.foldnestmax = 3
-vim.wo.foldminlines = 1
+vim.api.nvim_set_option("clipboard", "unnamed")
 vim.wo.foldlevel = 99
 vim.opt.guifont = "Hack Nerd Font:h11"
 vim.g.neovide_remember_window = true
