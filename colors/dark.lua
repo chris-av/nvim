@@ -75,7 +75,7 @@ local dark = {
   Title =  { fg = 'magenta' },
   WarningMsg =  { fg = 'red' },
   WildMenu =  { fg = 'yellow' },
-  Folded =  { bg = 'darkgrey' },
+  Folded =  { bg = 'none' },
   FoldColumn =  { bg = 'grey' },
   DiffText =  { bg = 'red' },
   Conceal =  { bg = 'darkgrey' },
@@ -114,6 +114,11 @@ local dark = {
   BufferLineModifiedSelected =  { bg = 'None', fg = 'white' },
   BufferLineModifiedVisible =  { bg = 'None', fg = 'grey' },
 
+  -- Ufo
+  UfoFoldedBg = { bg = 'none' },
+  UfoCursorFoldedLine = { bg = 'none' },
+  UfoPreviewSbar = { bg = 'none' },
+  UfoPreviewCursorLine = { bg = 'none' },
 
 }
 
