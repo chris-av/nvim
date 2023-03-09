@@ -123,6 +123,10 @@ catppuccin.setup({
     telekasten = true,
     symbols_outline = true,
     mini = false,
+  },
+  custom_highlights = {
+    Folded = { bg = 'none' },
+    UfoFoldedBg = { bg = 'none' }
   }
 })
 
