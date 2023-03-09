@@ -13,7 +13,12 @@ return function(client, bufnr)
   -- Mappings.
   vim.keymap.set('n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<CR>', { noremap = true, silent = true, desc = "Buffer declarations" })
   vim.keymap.set('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', { noremap = true, silent = true, desc = "Go to definition" })
-  vim.keymap.set('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', { noremap = true, silent = true, desc = "View definition" })
+  vim.keymap.set('n', 'K', function()
+    local winid = require('ufo').peekFoldedLinesUnderCursor()
+    if not winid then
+      vim.lsp.buf.hover()
+    end
+  end, { noremap = true, silent = true, desc = "View definition" })
   vim.keymap.set('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', { noremap = true, silent = true, desc = "Get implementation" })
   vim.keymap.set('n', 'SH', '<cmd>lua vim.lsp.buf.signature_help()<CR>', { noremap = true, silent = true, desc = "Signature help" })
   vim.keymap.set('n', '<space>wa', '<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>', { noremap = true, silent = true, desc = "Add workspace to folder" })
