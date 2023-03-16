@@ -10,6 +10,7 @@ end
 packer.startup(function()
   local use = packer.use
   use 'wbthomason/packer.nvim'
+  use "williamboman/mason.nvim"
 
   -- lsp
   use 'neovim/nvim-lspconfig'
