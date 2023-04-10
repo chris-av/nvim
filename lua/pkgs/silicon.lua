@@ -5,35 +5,25 @@ if not status_ok then
   return
 end
 
+local home = os.getenv("HOME")
+local save_location = home .. "/Desktop/"
 
 silicon.setup({
-  -- The following key is required if you want to save image to file instead of clipboard
-  -- output = string.format(
-  --   "SILICON_%s-%s-%s.png",
-  --   os.date("%Y"),
-  --   os.date("%m"),
-  --   os.date("%d")
-  -- ),
-  output = "testfile.png",
-  -- The following keys are all optional
-  -- with default values
-  font = 'Hack=20',
-  theme = 'Dracula',
-  background = '#0AA6F3',
-  shadow = {
-    blur_radius = 0.0,
-    offset_x = 0,
-    offset_y = 0,
-    color = '#555'
-  },
-  pad_horiz = 100,
+  font = 'FantasqueSansMono Nerd Font=26',
+  background = '#87f',
+  theme = 'Monokai Extended',
+  line_number = true,
   pad_vert = 80,
-  line_number = false,
-  line_pad = 2,
-  line_offset = 1,
-  tab_width = 4,
-  round_corner = true,
-  window_controls = true,
+  pad_horiz = 50,
+  output = {
+    path = "/Users/chrisvalenzuela/Desktop/"
+  },
+  watermark = {
+    text = ' @chris-av',
+  },
+  window_title = function()
+    return vim.fn.fnamemodify(vim.fn.bufname(vim.fn.bufnr()), ':~:.')
+  end,
 })
 
 
