@@ -6,5 +6,16 @@ if not status_ok then
 end
 
 
-telescope.setup()
+local actions = require('telescope.actions')
+
+
+telescope.setup({
+  defaults = {
+    mappings = {
+      i = {
+        ["<Esc>"] = actions.close,
+      },
+    }
+  }
+})
 
