@@ -89,17 +89,16 @@ bufferline.setup {
     -- end
   },
   highlights = {
-
+    background = {
+      bg = 'none',
+    },
+    indicator_selected = {
+      fg = 'green',
+      bg = 'none',
+    },
     separator = {
-      fg = terminal_bg,
-      bg = terminal_bg,
+      fg = tab_bg,
     },
-
-    separator_selected = {
-      fg = 'white',
-      bg = terminal_bg,
-    },
-
   },
 }
 
