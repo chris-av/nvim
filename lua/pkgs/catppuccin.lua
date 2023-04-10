@@ -126,7 +126,7 @@ catppuccin.setup({
   },
   custom_highlights = {
     Folded = { bg = 'none' },
-    UfoFoldedBg = { bg = 'none' }
+    UfoFoldedBg = { bg = 'none' },
   }
 })
 
