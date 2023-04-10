@@ -95,6 +95,9 @@ local dark = {
   -- TSException =  { fg = '' }, guifg=lightgreen
   TSConditional =  { bold = false, fg = 'lightgreen' },
   TSRepeat =  { bold = false, fg = 'lightgreen' },
+  ["@tag"] = { fg = 'lightgreen', bold = true, },
+  ["@tag.attribute"] = { fg = 'green', },
+  ["@constructor"] = { fg = 'lightgreen', bold = true, },
 
   -- Nvim Tree highlights
   NvimTreeFolderIcon =  { fg = 'cyan' },
