@@ -117,7 +117,7 @@ packer.startup(function()
   --   "narutoxy/silicon.lua",
   --   requires = { "nvim-lua/plenary.nvim" }
   -- }
-  use {'krivahtoo/silicon.nvim', run = './install.sh'}
+  use {'krivahtoo/silicon.nvim', run = './install.sh build'}
 
   -- non neovim plugins
   use 'maxmellon/vim-jsx-pretty'
