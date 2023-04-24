@@ -127,6 +127,8 @@ catppuccin.setup({
   custom_highlights = {
     Folded = { bg = 'none' },
     UfoFoldedBg = { bg = 'none' },
+    DevIconTsx = { fg = '#20c2e3' },
+    DevIconJsx = { fg = '#20c2e3' },
   }
 })
 
