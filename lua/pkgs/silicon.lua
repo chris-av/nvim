@@ -9,14 +9,16 @@ local home = os.getenv("HOME")
 local save_location = home .. "/Desktop/"
 
 silicon.setup({
-  font = 'FantasqueSansMono Nerd Font=26',
+  font = 'Hack Nerd Font=26',
   background = '#87f',
-  theme = 'Monokai Extended',
+  theme = 'Dracula',
   line_number = true,
   pad_vert = 80,
   pad_horiz = 50,
   output = {
-    path = "/Users/chrisvalenzuela/Desktop/"
+    clipboard = false,
+    format = "silicon-[year][month][day].png",
+    path = "/Users/chrisvalenzuela/Documents/Screen Recordings/",
   },
   watermark = {
     text = ' @chris-av',
@@ -26,4 +28,6 @@ silicon.setup({
   end,
 })
 
+
+vim.api.nvim_set_keymap('n', '<leader>ss', ':Silicon!<CR>', { noremap = true, silent = true })
 
