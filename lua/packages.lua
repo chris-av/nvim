@@ -31,7 +31,6 @@ packer.startup(function()
     requires = 'neovim/nvim-lspconfig'
   }
   use 'tpope/vim-fugitive'
-  -- use 'mhinz/vim-signify'
   use 'lewis6991/gitsigns.nvim'
   use {
     'akinsho/bufferline.nvim',
@@ -81,11 +80,6 @@ packer.startup(function()
   use 'nvim-telescope/telescope-dap.nvim'
   use 'theHamsta/nvim-dap-virtual-text'
   use 'mfussenegger/nvim-dap-python'
-  -- appears that dapinsall is archived, to be replaced by dap-buddy.nvim, keep eye out on new repo
-  -- use {
-  --   'Pocco81/DAPInstall.nvim',
-  --   module = 'dap-install'
-  -- }
   use {
     'rcarriga/nvim-dap-ui',
     requires = {
@@ -113,10 +107,6 @@ packer.startup(function()
   }
 
   -- miscellaneous
-  -- use {
-  --   "narutoxy/silicon.lua",
-  --   requires = { "nvim-lua/plenary.nvim" }
-  -- }
   use {'krivahtoo/silicon.nvim', run = './install.sh build'}
 
   -- non neovim plugins
