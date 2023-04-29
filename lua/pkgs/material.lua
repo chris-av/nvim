@@ -13,6 +13,9 @@ material.setup({
     colored_cursor = true,
   },
   custom_highlights = {
+    DevIconTsx = { fg = 'LightBlue' },
+    DevIconJsx = { fg = 'LightBlue' },
+
     NvimTreeFolderIcon = { fg = 'LightBlue' },
     NvimTreeGitNew = { fg = 'red' },
     NvimTreeGitDirty = { fg = 'LightGreen' },
