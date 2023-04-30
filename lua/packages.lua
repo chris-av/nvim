@@ -111,7 +111,7 @@ packer.startup(function()
 
   -- non neovim plugins
   use 'maxmellon/vim-jsx-pretty'
-  use 'ryanoasis/vim-devicons'
+  -- use 'ryanoasis/vim-devicons'
 
   if packer_bootstrap then
     require('packer').sync()
