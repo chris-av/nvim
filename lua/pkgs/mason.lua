@@ -7,6 +7,8 @@ if not status_ok then
 end
 
 
+require('mason-lspconfig').setup()
+
 
 mason.setup({
     -- The directory in which to install packages.
