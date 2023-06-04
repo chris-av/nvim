@@ -29,25 +29,27 @@ require('lsp')
 require('debuggers')
 require('pkgs')
 
-
 local iterm_prof = os.getenv('ITERM_PROFILE')
+local term_prof = os.getenv('TERM_PROFILE')
+local prof = ""
 
 if (iterm_prof == nil) then
-  return
+  prof = term_prof
+elseif (term_prof == nil) then
+  prof = "default"
 end
 
-
-if (iterm_prof == 'Material Deep Ocean') then
+if (prof == 'Material Deep Ocean') then
   vim.cmd" colorscheme material "
-elseif (string.match(iterm_prof, 'Catppuccin')) then
+elseif (string.match(prof, 'Catppuccin')) then
   vim.cmd" colorscheme catppuccin "
-elseif (iterm_prof == 'Embark') then
+elseif (prof == 'Embark') then
   vim.cmd" colorscheme embark "
-elseif (iterm_prof == 'Dark') then
+elseif (prof == 'Dark') then
   vim.cmd" colorscheme dark "
-elseif (iterm_prof == 'Coal') then
+elseif (prof == 'Coal') then
   vim.cmd" colorscheme coal "
-elseif (iterm_prof == 'Matrix Theme') then
+elseif (prof == 'Matrix') then
   vim.cmd" colorscheme matrix "
 end
 
