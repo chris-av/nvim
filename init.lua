@@ -31,11 +31,16 @@ require('pkgs')
 
 local iterm_prof = os.getenv('ITERM_PROFILE')
 local term_prof = os.getenv('TERM_PROFILE')
-local prof = ""
+local prof = iterm_prof
 
-if (iterm_prof == nil) then
+local function isempty(s)
+  return s == nil or s == ''
+end
+
+
+if (isempty(iterm_prof)) then
   prof = term_prof
-elseif (term_prof == nil) then
+elseif (isempty(iterm_prof) and isempty(term_prof)) then
   prof = "default"
 end
 
