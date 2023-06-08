@@ -20,6 +20,12 @@ devicons.setup({
 })
 
 devicons.set_icon({
+  ["tsx"] = {
+    icon = devicons.get_icon('index.jsx', 'jsx', { default = true }),
+    name = "Tsx",
+    color = '#20c2e3',
+    cterm_color = "45",
+  },
   [".eslintrc"] = {
     icon = "",
     name = "Eslintrc",
