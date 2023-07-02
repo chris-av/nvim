@@ -15,71 +15,63 @@ end
 
 navic.setup({
   icons = {
-    File          = " ",
+    File          = "󰈙 ",
     Module        = " ",
-    Namespace     = " ",
+    Namespace     = "󰌗 ",
     Package       = " ",
-    Class         = " ",
-    Method        = " ",
+    Class         = "󰌗 ",
+    Method        = "󰆧 ",
     Property      = " ",
     Field         = " ",
     Constructor   = " ",
-    Enum          = "練",
-    Interface     = "練",
-    Function      = " ",
-    Variable      = " ",
-    Constant      = " ",
-    String        = " ",
-    Number        = " ",
+    Enum          = "󰕘",
+    Interface     = "󰕘",
+    Function      = "󰊕 ",
+    Variable      = "󰆧 ",
+    Constant      = "󰏿 ",
+    String        = "󰀬 ",
+    Number        = "󰎠 ",
     Boolean       = "◩ ",
-    Array         = " ",
-    Object        = " ",
-    Key           = " ",
-    Null          = "ﳠ ",
+    Array         = "󰅪 ",
+    Object        = "󰅩 ",
+    Key           = "󰌋 ",
+    Null          = "󰟢 ",
     EnumMember    = " ",
-    Struct        = " ",
+    Struct        = "󰌗 ",
     Event         = " ",
-    Operator      = " ",
-    TypeParameter = " ",
-
+    Operator      = "󰆕 ",
+    TypeParameter = "󰊄 ",
   }
 })
 
 
 
 -- now call lualine, and extend it with gps
-lualine.setup {
-  options = {
-    icons_enabled = true,
-    theme = 'catppuccin',
-    component_separators = { left = '', right = ''},
-    section_separators = { left = '', right = ''},
-    disabled_filetypes = { 'NvimTree' },
-    always_divide_middle = true,
-    globalstatus = true
-  },
+lualine.setup({
   sections = {
-    lualine_a = {'mode'},
-    lualine_b = {'branch', 'diff', 'diagnostics'},
-    lualine_c = {{ navic.get_location, cond = navic.is_available }},
-    lualine_x = {'encoding', 'fileformat', 'filetype'},
+    lualine_a = { 'mode' },
+    lualine_b = { 'branch', 'diff', 'diagnostics' },
+    lualine_c = {
+      "navic",
+    },
+    lualine_x = { 'encoding', 'fileformat', 'filetype' },
     lualine_y = {},
-    lualine_z = {'location'}
+    lualine_z = { 'location' }
   },
   inactive_sections = {
     lualine_a = {},
     lualine_b = {},
-    lualine_c = {'filename'},
-    lualine_x = {'location'},
+    lualine_c = { 'filename' },
+    lualine_x = { 'location' },
     lualine_y = {},
     lualine_z = {}
   },
   winbar = {
-    lualine_z = {{ 'filename', path = 1 }}
+    lualine_z = { { 'filename', path = 1 } }
   },
   inactive_winbar = {
-    lualine_z = {{ 'filename', path = 1 }}
+    lualine_z = { { 'filename', path = 1 } }
   },
   tabline = {},
   extensions = {}
-}
+})
