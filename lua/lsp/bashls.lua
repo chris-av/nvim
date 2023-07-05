@@ -7,7 +7,7 @@ nvim_lsp['bashls'].setup {
   on_attach = on_attach,
   capabilities = capabilities,
   cmd = { 'bash-language-server', 'start' },
-  filetypes = { 'sh' },
+  filetypes = { 'sh', 'conf' },
   cmd_env = {
     GLOB_PATTERN = "*@(.sh|.inc|.bash|.command)"
   }
