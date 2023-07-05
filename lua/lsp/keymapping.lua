@@ -11,8 +11,15 @@ vim.g.mapleader = " "
 vim.g.localmapleader = " "
 
 
+local telescope = require('telescope')
+local telebuiltins = require('telescope.builtin')
+local dap = require('dap')
 
-
+local curr_buff_srch = function()
+  local themes = require('telescope.themes')
+  local previewer = themes.get_dropdown({ previewer = false })
+  telebuiltins.current_buffer_fuzzy_find(previewer)
+end
 
 
 -- general
@@ -28,20 +35,17 @@ vim.keymap.set('n', '<leader>n', '<cmd>NvimTreeFindFile<CR>', extend(opts, exten
 
 
 -- telescope
-vim.keymap.set('n', '<leader>km', "<cmd>lua require('telescope.builtin').keymaps()<CR>", extend(opts, { desc = "list keymappings" }))
-vim.keymap.set('n', '<leader>co', "<cmd>lua require('telescope.builtin').colorscheme({ enable_preview = true })<CR>", extend(opts, { desc = "list colorschemes" }))
-vim.keymap.set('n', '<leader>hi', "<cmd>lua require('telescope.builtin').highlights()<CR>", extend(opts, { desc = "list highlights" }))
-vim.keymap.set('n', 'ff', "<cmd>lua require('telescope.builtin').find_files()<CR>", extend(opts, { desc = "find files" }))
-vim.keymap.set('n', '<leader>gg', "<cmd>lua require('telescope.builtin').git_commits()<CR>", extend(opts, { desc = "list git commits" }))
-vim.keymap.set('n', '<leader>/', function()
-  require('telescope.builtin').current_buffer_fuzzy_find(require('telescope.themes').get_dropdown({
-    previewer = false,
-  })) end,
-  extend(opts, { desc = "find in current buffer" })
-)
-vim.keymap.set('n', 'fg', "<cmd>lua require('telescope.builtin').live_grep()<CR>", extend(opts, { desc = "live grep" }))
-vim.keymap.set('n', 'fb', "<cmd>lua require('telescope.builtin').buffers()<CR>", extend(opts, { desc = "get buffers" }))
-vim.keymap.set('n', 'fh', "<cmd>lua require('telescope.builtin').help_tags()<CR>", extend(opts, { desc = "help tags" }))
+vim.keymap.set('n', '<leader>km', telebuiltins.keymaps, extend(opts, { desc = "list keymappings" }))
+vim.keymap.set('n', '<leader>co', function ()
+  telebuiltins.colorscheme({ enable_preview = true, })
+end, extend(opts, { desc = "list colorschemes" }))
+vim.keymap.set('n', '<leader>hi', telebuiltins.highlights, extend(opts, { desc = "list highlights" }))
+vim.keymap.set('n', 'ff', telebuiltins.find_files, extend(opts, { desc = "find files" }))
+vim.keymap.set('n', '<leader>gg', telebuiltins.git_commits, extend(opts, { desc = "list git commits" }))
+vim.keymap.set('n', '<leader>/', curr_buff_srch, extend(opts, { desc = "find in current buffer" }))
+vim.keymap.set('n', 'fg', telebuiltins.live_grep, extend(opts, { desc = "live grep" }))
+vim.keymap.set('n', 'fb', telebuiltins.buffers, extend(opts, { desc = "get buffers" }))
+vim.keymap.set('n', 'fh', telebuiltins.help_tags, extend(opts, { desc = "help tags" }))
 
 
 -- bufferline
@@ -86,7 +90,6 @@ vim.keymap.set('n', '<leader>drl', '<cmd>lua require"dap".repl.run_last()<CR>', 
 
 
 -- telescope-dap
-local telescope = require('telescope')
 vim.keymap.set('n', '<leader>dcc',
           telescope.extensions.dap.commands,
           extend(opts, extend(opts, { desc = "DAP - see commands" })))
