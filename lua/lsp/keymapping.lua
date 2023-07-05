@@ -1,4 +1,8 @@
 vim.keymap.set("", "<Space>", "<Nop>", { noremap = true, silent = true, desc = "reserve space for leader" })
+local opts = { }
+local extend = function (tbl, desc)
+  return vim.tbl_extend("error", tbl, desc)
+end
 vim.g.mapleader = " "
 vim.g.localmapleader = " "
 
