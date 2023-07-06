@@ -13,7 +13,14 @@ vim.g.localmapleader = " "
 
 local telescope = require('telescope')
 local telebuiltins = require('telescope.builtin')
+local debuggers = require('debuggers.node')
 local dap = require('dap')
+local dapui_widgets = require('dap.ui.widgets')
+
+
+-- print(tmp)
+
+
 
 local curr_buff_srch = function()
   local themes = require('telescope.themes')
@@ -63,30 +70,22 @@ vim.keymap.set('n', '<leader>gs', ':Telescope git_status<CR>', extend(opts, { de
 
 
 -- for debugger
-vim.keymap.set('n', '<F12>', '<cmd>lua require"dap".step_out()<CR>', extend(opts, { desc = "Debugger (DAP) - step out" }))
-vim.keymap.set('n', '<F11>', '<cmd>lua require"dap".step_into()<CR>', extend(opts, { desc = "Debugger (DAP) - step into" }))
-vim.keymap.set('n', '<F10>', '<cmd>lua require"dap".step_over()<CR>', extend(opts, { desc = "Debugger (DAP) - step over" }))
-vim.keymap.set('n', '<F5>', '<cmd>lua require"dap".continue()<CR>', extend(opts, { desc = "Debugger (DAP) - continue" }))
-vim.keymap.set('n', '<F1>', '<cmd>lua require"dap".toggle_breakpoint()<CR>', extend(opts, { desc = "Debugger (DAP) - toggle breakpoint" }))
-vim.keymap.set('n', '<leader>daa', '<cmd>lua require("debuggers.node").attach()<CR>', extend(opts, { desc = "Debugger (DAP) - attach" }))
-vim.keymap.set('n', '<leader>dar', '<cmd>lua require("debuggers.node").attachToRemote()<CR>', extend(opts, { desc = "Debugger (DAP) - attach to remote" }))
-vim.keymap.set('n', '<F3>', '<cmd>lua require("dap").terminate()<CR>', extend(opts, { desc = "Debugger (DAP) - terminate" }))
+vim.keymap.set('n', '<F12>', dap.step_out, extend(opts, { desc = "Debugger (DAP) - step out" }))
+vim.keymap.set('n', '<F11>', dap.step_into, extend(opts, { desc = "Debugger (DAP) - step into" }))
+vim.keymap.set('n', '<F10>', dap.step_over, extend(opts, { desc = "Debugger (DAP) - step over" }))
+vim.keymap.set('n', '<F5>', dap.continue, extend(opts, { desc = "Debugger (DAP) - continue" }))
+vim.keymap.set('n', '<F1>', dap.toggle_breakpoint, extend(opts, { desc = "Debugger (DAP) - toggle breakpoint" }))
+vim.keymap.set('n', '<leader>daa', debuggers.attach, extend(opts, { desc = "Debugger (DAP) - attach" }))
+vim.keymap.set('n', '<leader>dar', debuggers.attachToRemote, extend(opts, { desc = "Debugger (DAP) - attach to remote" }))
+vim.keymap.set('n', '<F3>', dap.terminate, extend(opts, { desc = "Debugger (DAP) - terminate" }))
 
-vim.keymap.set('n', '<leader>dsc', '<cmd>lua require"dap.ui.variables".scopes()<CR>', extend(opts, { desc = "DAP - variable scopes" }))
-vim.keymap.set('n', '<leader>dhh', '<cmd>lua require"dap.ui.variables".hover()<CR>', extend(opts, { desc = "DAP - variable hover" }))
-vim.keymap.set('v', '<leader>dhv',
-          '<cmd>lua require"dap.ui.variables".visual_hover()<CR>', extend(opts, { desc = "DAP - visual hover" }))
-
-vim.keymap.set('n', '<leader>duh', '<cmd>lua require"dap.ui.widgets".hover()<CR>', extend(opts, { desc = "DAP - widget hover" }))
+vim.keymap.set('n', '<leader>duh', dapui_widgets.hover, extend(opts, { desc = "DAP - widget hover" }))
 vim.keymap.set('n', '<leader>duf',
-          "<cmd>lua local widgets=require'dap.ui.widgets';widgets.centered_float(widgets.scopes)<CR>", extend(opts, { desc = "DAP - center widgets" }))
-
-vim.keymap.set('n', '<leader>dsbr',
-          '<cmd>lua require"dap".set_breakpoint(vim.fn.input("Breakpoint condition: "))<CR>', extend(opts, { desc = "DAP - set breakpoint condition" }))
-vim.keymap.set('n', '<leader>dsbm',
-          '<cmd>lua require"dap".set_breakpoint(nil, nil, vim.fn.input("Log point message: "))<CR>', extend(opts, { desc = "DAP - log point message" }))
-vim.keymap.set('n', '<leader>dro', '<cmd>lua require"dap".repl.open()<CR>', extend(opts, { desc = "DAP - open repl" }))
-vim.keymap.set('n', '<leader>drl', '<cmd>lua require"dap".repl.run_last()<CR>', extend(opts, { desc = "DAP - repl run last command" }))
+          function ()
+            local widgets=require'dap.ui.widgets'
+            widgets.centered_float(widgets.scopes)
+          end,
+          extend(opts, { desc = "DAP - center widgets" }))
 
 
 -- telescope-dap
