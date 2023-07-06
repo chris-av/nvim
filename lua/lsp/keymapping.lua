@@ -18,9 +18,6 @@ local dap = require('dap')
 local dapui_widgets = require('dap.ui.widgets')
 
 
--- print(tmp)
-
-
 
 local curr_buff_srch = function()
   local themes = require('telescope.themes')
