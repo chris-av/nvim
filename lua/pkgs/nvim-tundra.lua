@@ -1,14 +1,59 @@
-local status_ok, tundra = pcall(require, 'tundra')
-local notifications = require('utils.notifications') 
-if not status_ok then
-  notifications.plugin_error('tundra')
-  return
-end
-
-
-vim.opt.background('dark')
-
-tundra.setup({
-  transparent_background = true,
+require('nvim-tundra').setup({
+  transparent_background = false,
+  dim_inactive_windows = {
+    enabled = false,
+    color = nil,
+  },
+  sidebars = {
+    enabled = true,
+    color = nil,
+  },
+  editor = {
+    search = {},
+    substitute = {},
+  },
+  syntax = {
+    booleans = { bold = true, italic = true },
+    comments = { bold = true, italic = true },
+    conditionals = {},
+    constants = { bold = true },
+    fields = {},
+    functions = {},
+    keywords = {},
+    loops = {},
+    numbers = { bold = true },
+    operators = { bold = true },
+    punctuation = {},
+    strings = {},
+    types = { italic = true },
+  },
+  diagnostics = {
+    errors = {},
+    warnings = {},
+    information = {},
+    hints = {},
+  },
+  plugins = {
+    lsp = true,
+    semantic_tokens = true,
+    treesitter = true,
+    telescope = true,
+    nvimtree = true,
+    cmp = true,
+    context = true,
+    dbui = true,
+    gitsigns = true,
+    neogit = true,
+    textfsm = true,
+  },
+  overwrite = {
+    colors = {},
+    highlights = {},
+  },
 })
 
+
+-- -- I usually don't have to call these for other colorschemes;
+-- -- Ideally, would like to :colorscheme tundra manually without breaking
+-- vim.opt.background = 'dark'
+-- vim.cmd('colorscheme tundra')
