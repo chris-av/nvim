@@ -8,7 +8,7 @@ local dark = {
   Normal =  { fg = 'white' },
   Comment =  { fg = 'grey', bold = true },
   Constant =  { fg = '#FF5EFF' },
-  Conditional =  { fg = 'white' },
+  Conditional =  { fg = 'lightgreen' },
   Identifier =  { fg = '#40ffff' },
   Include =  { fg = 'lightgreen' },
   Function =  { fg = 'white' },
