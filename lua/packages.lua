@@ -1,9 +1,10 @@
 local fn = vim.fn
 local packer = require('packer')
 
-local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
+local install_path = fn.stdpath('data') .. '/site/pack/packer/start/packer.nvim'
 if fn.empty(fn.glob(install_path)) > 0 then
-  packer_bootstrap = fn.system({ 'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path })
+  packer_bootstrap = fn.system({ 'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim',
+    install_path })
   -- vim.cmd 'packadd packer.nvim'
 end
 
@@ -23,7 +24,7 @@ packer.startup(function()
   use 'ziglang/zig.vim'
   use {
     'laytan/tailwind-sorter.nvim',
-    requires = {'nvim-treesitter/nvim-treesitter', 'nvim-lua/plenary.nvim'},
+    requires = { 'nvim-treesitter/nvim-treesitter', 'nvim-lua/plenary.nvim' },
     run = 'cd formatter && npm i && npm run build',
   }
 
@@ -49,7 +50,7 @@ packer.startup(function()
   use 'tiagovla/scope.nvim'
   use 'voldikss/vim-floaterm'
   use 'rcarriga/nvim-notify'
-  use {'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async'}
+  use { 'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async' }
 
   -- completion
   use 'hrsh7th/nvim-cmp'
@@ -114,7 +115,7 @@ packer.startup(function()
   }
 
   -- miscellaneous
-  use {'krivahtoo/silicon.nvim', run = './install.sh build'}
+  -- use { 'krivahtoo/silicon.nvim', run = './install.sh build' }
 
   -- non neovim plugins
   use 'maxmellon/vim-jsx-pretty'
@@ -123,5 +124,4 @@ packer.startup(function()
   if packer_bootstrap then
     require('packer').sync()
   end
-
 end)
