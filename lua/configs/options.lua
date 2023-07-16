@@ -35,6 +35,7 @@ vim.api.nvim_set_option("clipboard", "unnamed")
 vim.wo.foldlevel = 99
 vim.opt.guifont = "Hack Nerd Font:h11"
 vim.g.neovide_remember_window = true
+vim.g.neovide_fullscreen = true
 
 
 -- will get over written by other plugins
