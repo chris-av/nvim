@@ -8,9 +8,9 @@ nvim_lsp['rust_analyzer'].setup({
   on_attach = on_attach,
   capabilities = capabilities,
   cmd = {
-    "rustup", "run", "stable", "rust-analyzer",
+    "rust-analyzer",
   },
-  -- filetypes = { "rust" },
+  filetypes = { "rust" },
   -- root_dir = { "Cargo.toml", "rust-project.json" },
 })
 
