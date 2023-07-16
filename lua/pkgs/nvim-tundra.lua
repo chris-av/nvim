@@ -53,8 +53,4 @@ require('nvim-tundra').setup({
 })
 
 
--- -- I usually don't have to call these for other colorschemes;
--- -- Ideally, would like to :colorscheme tundra manually without breaking
--- -- for some reason, package still breaks my config, even if I uncomment the below
--- vim.opt.background = 'dark'
--- vim.cmd('colorscheme tundra')
+
