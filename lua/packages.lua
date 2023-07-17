@@ -78,7 +78,8 @@ packer.startup(function()
     as = 'embark',
     branch = 'main'
   })
-  use 'B4mbus/oxocarbon-lua.nvim'
+  -- use 'B4mbus/oxocarbon-lua.nvim'
+  use 'nyoom-engineering/oxocarbon.nvim'
   use 'cranberry-clockworks/coal.nvim'
   use 'sam4llis/nvim-tundra'
 
