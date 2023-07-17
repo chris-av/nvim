@@ -26,7 +26,6 @@ require('pkgs.material')
 require('pkgs.catppuccin')
 require('pkgs.nvim-tundra')
 -- require('pkgs.github-themes')
--- require('pkgs.oxocarbon')
 
 
 -- misc
