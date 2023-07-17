@@ -1,22 +1,33 @@
 require('pkgs.nvim-notify')
+
+-- core functionality
 require('pkgs.bufferline')
--- require('pkgs.github-themes')
 require('pkgs.lualine')
 require('pkgs.gitsigns')
-require('pkgs.material')
 require('pkgs.nvim-tree')
-require('pkgs.nvim-web-devicons')
-require('pkgs.comment')
 require('pkgs.telescope')
+require('pkgs.floaterm')
+
+
+-- syntax, autocomplete, etc.
 require('pkgs.cmp')
 require('pkgs.nvim-autopairs')
 require('pkgs.treesitter')
 require('pkgs.luasnip')
-require('pkgs.floaterm')
-require('pkgs.catppuccin')
+require('pkgs.ufo')
 require('pkgs.nvim-surround')
 require('pkgs.tailwind-sorter')
--- require('pkgs.silicon')
-require('pkgs.ufo')
+require('pkgs.comment')
+require('pkgs.nvim-web-devicons')
+
+
+-- colorschemes
+require('pkgs.material')
+require('pkgs.catppuccin')
+require('pkgs.nvim-tundra')
+-- require('pkgs.github-themes')
 -- require('pkgs.oxocarbon')
--- require('pkgs.nvim-tundra')
+
+
+-- misc
+-- require('pkgs.silicon')
