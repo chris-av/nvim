@@ -44,7 +44,7 @@ elseif (isempty(iterm_prof) and isempty(term_prof)) then
   prof = "default"
 end
 
-if (prof == 'Material Deep Ocean') then
+if (string.match(prof, "Material Deep Ocean")) then
   vim.cmd" colorscheme material "
 elseif (string.match(prof, 'Catppuccin')) then
   vim.cmd" colorscheme catppuccin "
